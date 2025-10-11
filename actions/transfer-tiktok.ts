@@ -104,7 +104,7 @@ export async function transferTiktok(
   const payload = JSON.parse(text)
   if (payload.code !== 0) {
     if (payload.msg.includes("is not a valid image file")) console.log(urlBg)
-    throw new TransferTiktokError(payload.msg)
+    throw new TransferTiktokError(payload.msg + (typeof url === 'string' ? ` url=${url}` : ""))
   }
 
   return payload as TikTokUploadResponse
