@@ -16,7 +16,7 @@ import { retryAsync } from "ts-retry"
 // )
 //
 
-for (let i = 1; ; i++) {
+for (let i = 4; ; i++) {
   const limit = pLimit(10)
 
   const mangas = await getRecently(i)
@@ -28,8 +28,8 @@ for (let i = 1; ; i++) {
 
         try {
           await upsertManga(
-            await retryAsync(() => getManga(`${manga.id}`), { maxTry: 10 }),
-            await retryAsync(() => getMangaChapters(`${manga.id}`), { maxTry: 10 }),
+            await retryAsync(() => getManga(`${manga.id}`), { maxTry: 10, delay: 10_000 }),
+            await retryAsync(() => getMangaChapters(`${manga.id}`), { maxTry: 10, delay: 10_000 }),
             cookie
           )
 
