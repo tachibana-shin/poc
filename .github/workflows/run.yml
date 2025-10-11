@@ -1,0 +1,41 @@
+name: Manual Build (Bun + Rust + WASM)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Setup wasm-pack
+        run: |
+          cargo install wasm-pack --locked
+
+      - name: Build WASM
+        working-directory: wasm
+        run: |
+          echo "Building WASM using wasm-pack..."
+          sh build.sh
+
+      - name: Write environment file
+        run: |
+          echo "${{ secrets.ENV_CONTENT }}" > .env
+          echo ".env file created with secret content"
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run index.ts
+        run: bun index.ts
