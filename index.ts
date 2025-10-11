@@ -20,6 +20,7 @@ for (let i = 4; ; i++) {
   const limit = pLimit(10)
 
   const mangas = await getRecently(i)
+  if (mangas.data.length < 1) break
   console.groupCollapsed(`Page ${i}`)
   await Promise.all(
     mangas.data.map(manga =>
