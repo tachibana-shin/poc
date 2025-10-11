@@ -209,3 +209,5 @@
 
 #2932(Sat Oct 11 2025 18:29:52 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: Retry later
 
+#3790(Sat Oct 11 2025 18:30:40 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3790,Sutochiru,ad-site-i18n-sg/202510115d0dc83cccfc11f442158ad1,ad-site-i18n-sg/202510115d0d1846caea3ab54dcd81ea,ad-site-i18n-sg/202510115d0da58f2b4af3144293bd71,ad-site-i18n-sg/202510115d0d137454cb3dd44b80b9d8,#c6c6c6,#090909,,,https://bookwalker.jp/series/516856/,false,true,101,false,24,{"{\"id\":8444,\"name\":\"Sutochiru\",\"primary\":true}"},2025-10-07T12:10:05.966Z,2025-10-11T10:23:06.793Z
