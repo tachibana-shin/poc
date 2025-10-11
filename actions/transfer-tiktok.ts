@@ -39,7 +39,7 @@ export interface Cookie {
 export async function transferTiktok(
   url: string | Uint8Array,
   selectedCookie: Cookie,
-  contentType: null | string,
+  contentType?: null | string,
   urlBg?: string
 ) {
   const csrftoken = selectedCookie.cookies.find(
