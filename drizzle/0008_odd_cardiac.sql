@@ -1,0 +1,1 @@
+ALTER TABLE "teams" ALTER COLUMN "facebook_address" DROP NOT NULL;

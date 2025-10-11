@@ -1,0 +1,29 @@
+#3253: Error: Failed query: insert into "chapters" ("id", "raw_id", "manga_id", "order", "number", "name", "views_count", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8) on conflict ("raw_id") do update set "raw_id" = $9, "manga_id" = $10, "order" = $11, "number" = $12, "name" = $13, "views_count" = $14, "created_at" = $15, "updated_at" = $16 returning "id"
+params: 72083,3,23,24,,2610,2025-09-04T15:44:00.307Z,2025-09-24T11:57:35.468Z,72083,3,23,24,,2610,2025-09-04T15:44:00.307Z,2025-09-24T11:57:35.468Z
+#2369: Error: Failed to fetch chapter info: Retry later
+
+#1947: Error: Failed to fetch chapter info: Retry later
+
+#2263: Error: Failed to fetch chapter info: Retry later
+
+#1947: Error: Failed to fetch chapter info: Retry later
+
+#2369: Error: Failed to fetch chapter info: Retry later
+
+#3240: Error: Failed to fetch manga info: Retry later
+
+#3345: Error: Failed to fetch manga info: Retry later
+
+#2698: Error: Failed to fetch manga info: Retry later
+
+#2958: Error: Failed to fetch manga info: Retry later
+
+#106: Error: Failed query: insert into "chapters" ("id", "raw_id", "manga_id", "order", "number", "name", "views_count", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8) on conflict ("raw_id") do update set "raw_id" = $9, "manga_id" = $10, "order" = $11, "number" = $12, "name" = $13, "views_count" = $14, "created_at" = $15, "updated_at" = $16 returning "id"
+params: 72989,9,229,228,Lu,19230,2025-09-16T18:19:08.628Z,2025-10-11T10:47:32.905Z,72989,9,229,228,Lu,19230,2025-09-16T18:19:08.628Z,2025-10-11T10:47:32.905Z
+#3590: TransferTiktokError: file unnamed. (File format is not in the list of uploadable formats.) is not a valid image file
+#3742: TransferTiktokError: file unnamed. (File format is not in the list of uploadable formats.) is not a valid image file
+#989: TransferTiktokError: file unnamed. (File format is not in the list of uploadable formats.) is not a valid image file
+#3743: TransferTiktokError: file unnamed. (File format is not in the list of uploadable formats.) is not a valid image file
+#2147: TransferTiktokError: file unnamed. (File format is not in the list of uploadable formats.) is not a valid image file
+#2102: Error: Failed query: insert into "teams" ("id", "raw_id", "slug", "name", "description", "is_ads", "facebook_address", "views_count", "translations_count", "main_page_blocks", "avatar_url", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) on conflict ("slug") do update set "raw_id" = $13, "slug" = $14, "name" = $15, "description" = $16, "is_ads" = $17, "facebook_address" = $18, "views_count" = $19, "translations_count" = $20, "main_page_blocks" = $21, "avatar_url" = $22, "created_at" = $23, "updated_at" = $24 returning "id", "updated_at"
+params: 340,starry-moon,Starry Moon,TOI YEU FEMBOIIIII (Hideyoshi),true,,122783,2,,ad-site-i18n-sg/202510115d0db5527b1eea6647b09651,2024-06-01T05:54:16.203Z,2025-10-10T22:47:32.806Z,340,starry-moon,Starry Moon,TOI YEU FEMBOIIIII (Hideyoshi),true,,122783,2,,ad-site-i18n-sg/202510115d0db5527b1eea6647b09651,2024-06-01T05:54:16.203Z,2025-10-10T22:47:32.806Z

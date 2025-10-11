@@ -1,0 +1,23 @@
+{
+  "name": "cuutruyen-crawler",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/sha256": "^0.2.2",
+    "@types/slug": "^5.0.9",
+    "drizzle-kit": "^0.31.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "drizzle-orm": "^0.44.6",
+    "p-limit": "^7.1.1",
+    "postgres": "^3.4.7",
+    "sha256": "^0.2.0",
+    "slug": "^11.0.0",
+    "ts-retry": "^6.0.0"
+  }
+}

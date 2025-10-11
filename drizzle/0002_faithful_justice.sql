@@ -1,0 +1,1 @@
+ALTER TABLE "pages" ADD COLUMN "size" integer NOT NULL;
