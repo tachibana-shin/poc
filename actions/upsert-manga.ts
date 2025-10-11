@@ -94,7 +94,6 @@ export async function upsertManga(
   // next update tags
   //
   assert(lastUpdate, "Manga is undefined")
-  console.log(chapters)
   const tagsIdDb = await Promise.all(
     manga.tags.map(async tag => await upsertTag(tag))
   )

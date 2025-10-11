@@ -32,13 +32,13 @@ for (let i = 1; ; i++) {
             cookie
           )
 
-          await writeFile("manga_ok.log", `#${manga.id}: ${manga.name}`, {
+          await writeFile("manga_ok.log", `#${manga.id}: ${manga.name}\n`, {
             flag: "a"
           })
         } catch (error) {
           console.error(error)
           // append log error and id manga and info newline to file error.log
-          await writeFile("error.log", `#${manga.id}(${new Date()}): ${error}`, { flag: "a" })
+          await writeFile("error.log", `#${manga.id}(${new Date()}): ${error}\n`, { flag: "a" })
         }
         console.groupEnd()
         console.log("Done manga ", manga.id)
@@ -47,7 +47,7 @@ for (let i = 1; ; i++) {
   )
   console.groupEnd()
   console.log("Done page ", i)
-  await writeFile("page_ok.log", `#${i}`, {
+  await writeFile("page_ok.log", `#${i}\n`, {
     flag: "a"
   })
 }
