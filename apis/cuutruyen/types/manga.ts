@@ -59,8 +59,8 @@ export interface MangaTeam {
   created_at: string;
   updated_at: string;
 
-  main_page_blocks: string; // JSON-encoded HTML content
-  avatar_url: string;
+  main_page_blocks?: string; // JSON-encoded HTML content
+  avatar_url?: string;
 }
 
 export interface MangaChapter {

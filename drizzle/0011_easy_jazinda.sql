@@ -1,0 +1,1 @@
+ALTER TABLE "teams" ALTER COLUMN "avatar_url" DROP NOT NULL;

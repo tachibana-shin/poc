@@ -18,7 +18,7 @@ export const teams = pgTable("teams", {
   translations_count: integer().notNull(),
 
   main_page_blocks: varchar(),
-  avatar_url: varchar().notNull(),
+  avatar_url: varchar(),
 
   created_at: timestamp().notNull().defaultNow(),
   updated_at: timestamp().notNull().defaultNow()
