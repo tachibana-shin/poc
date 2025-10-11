@@ -135,7 +135,7 @@ export async function upsertManga(
       limit(async () =>
         upsertChapter(
           lastUpdate.id,
-          await getMangaChapter(`${chapter.id}`),
+          await retryAsync(() => getMangaChapter(`${chapter.id}`), { maxTry: 10 }),
           cookie
         )
       )

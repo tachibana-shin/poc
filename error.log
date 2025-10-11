@@ -363,3 +363,13 @@ params: 183,dich-truyen-luyen-tieng-anh,Dịch truyện luyện tiếng Anh,Nhó
 params: 162,gia-hao,Gia Hào,Xin chào, tôi là Hào! Tôi chuyên dịch các oneshot ngắn (2~4 trang) hoặc một số các đầu truyện dài hạn. Các sản phẩm tôi dịch đều được lấy từ chính Twitter hoặc Pivix của tác giả.,true,Nurotygo,6030637,17,,,2023-05-24T11:46:19.047Z,2025-10-11T16:07:32.947Z,162,gia-hao,Gia Hào,Xin chào, tôi là Hào! Tôi chuyên dịch các oneshot ngắn (2~4 trang) hoặc một số các đầu truyện dài hạn. Các sản phẩm tôi dịch đều được lấy từ chính Twitter hoặc Pivix của tác giả.,true,Nurotygo,6030637,17,,,2023-05-24T11:46:19.047Z,2025-10-11T16:07:32.947Z
 #2789(Sat Oct 11 2025 19:46:56 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "teams" ("id", "raw_id", "slug", "name", "description", "is_ads", "facebook_address", "views_count", "translations_count", "main_page_blocks", "avatar_url", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) on conflict ("slug") do update set "raw_id" = $13, "slug" = $14, "name" = $15, "description" = $16, "is_ads" = $17, "facebook_address" = $18, "views_count" = $19, "translations_count" = $20, "main_page_blocks" = $21, "avatar_url" = $22, "created_at" = $23, "updated_at" = $24 returning "id", "updated_at"
 params: 475,miinorins-veranda,Miinorin's Veranda,,true,minorin0103,474242,5,,,2025-02-19T07:18:27.886Z,2025-10-08T21:07:32.553Z,475,miinorins-veranda,Miinorin's Veranda,,true,minorin0103,474242,5,,,2025-02-19T07:18:27.886Z,2025-10-08T21:07:32.553Z
+#3632(Sat Oct 11 2025 19:48:11 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: Retry later
+
+#3266(Sat Oct 11 2025 19:48:11 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: Retry later
+
+#3760(Sat Oct 11 2025 19:48:11 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: Retry later
+
+#2978(Sat Oct 11 2025 19:48:17 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: Retry later
+
+#3311(Sat Oct 11 2025 19:48:17 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: Retry later
+
