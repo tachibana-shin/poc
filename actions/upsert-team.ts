@@ -20,9 +20,10 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
   )
     return lastUpdate.id
 
-  team.avatar_url = await retryAsync(() =>
-    transferTiktok(team.avatar_url, cookie), { maxTry: 10 }
-  ).then(res => res.data.image_info.web_uri_v2)
+  if (team.avatar_url)
+    team.avatar_url = await retryAsync(() =>
+      transferTiktok(team.avatar_url, cookie), { maxTry: 10 }
+    ).then(res => res.data.image_info.web_uri_v2)
 
   const value: typeof teams.$inferInsert = {
     raw_id: team.id,

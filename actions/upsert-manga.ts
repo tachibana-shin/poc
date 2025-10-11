@@ -34,17 +34,17 @@ export async function upsertManga(
     // Run all transferTiktok in parallel
     const [cover, coverMobile, pano, panoMobile, teamId] = await Promise.all([
       retryAsync(() => transferTiktok(manga.cover_url, cookie), { maxTry: 10 }),
-      retryAsync(() => transferTiktok(manga.cover_mobile_url, cookie), { maxTry: 10 }),
-      retryAsync(() => transferTiktok(manga.panorama_url, cookie), { maxTry: 10 }),
-      retryAsync(() => transferTiktok(manga.panorama_mobile_url, cookie), { maxTry: 10 }),
+      manga.cover_mobile_url ? retryAsync(() => transferTiktok(manga.cover_mobile_url!, cookie), { maxTry: 10 }) : null,
+      manga.panorama_url ? retryAsync(() => transferTiktok(manga.panorama_url!, cookie), { maxTry: 10 }) : null,
+      manga.panorama_mobile_url ? retryAsync(() => transferTiktok(manga.panorama_mobile_url!, cookie), { maxTry: 10 }) : null,
       upsertTeam(manga.team, cookie)
     ] as const)
 
     // Then assign results
     manga.cover_url = cover.data.image_info.web_uri_v2
-    manga.cover_mobile_url = coverMobile.data.image_info.web_uri_v2
-    manga.panorama_url = pano.data.image_info.web_uri_v2
-    manga.panorama_mobile_url = panoMobile.data.image_info.web_uri_v2
+    manga.cover_mobile_url = coverMobile?.data.image_info.web_uri_v2
+    manga.panorama_url = pano?.data.image_info.web_uri_v2
+    manga.panorama_mobile_url = panoMobile?.data.image_info.web_uri_v2
 
     const value: typeof mangas.$inferInsert = {
       raw_id: manga.id,
