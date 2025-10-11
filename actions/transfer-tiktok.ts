@@ -54,8 +54,7 @@ export async function transferTiktok(
   if (!res.ok) throw new Error(await res.text())
   const buffer = await res.arrayBuffer()
 
-  const contentType = res.headers.get("content-type") ?? "image/png"
-  if (!res.headers.get("content-type")) console.warn(Object.fromEntries(res.headers.entries()))
+  const contentType = res.headers.get("content-type") ?? "image/jpeg"
   const blob = new Blob([buffer], { type: contentType })
 
   const form = new FormData()
