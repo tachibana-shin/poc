@@ -39,6 +39,7 @@ export interface Cookie {
 export async function transferTiktok(
   url: string | Uint8Array,
   selectedCookie: Cookie,
+  contentType: null | string,
   urlBg?: string
 ) {
   const csrftoken = selectedCookie.cookies.find(
@@ -55,7 +56,7 @@ export async function transferTiktok(
   if (!res.ok) throw new Error(await res.text())
   const buffer = await res.arrayBuffer()
 
-  const contentType = res.headers.get("content-type") ?? "image/jpeg"
+  contentType ??= res.headers.get("content-type") ?? "image/jpg"
   const blob = new Blob([buffer], { type: contentType })
 
   const form = new FormData()

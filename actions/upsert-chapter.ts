@@ -69,9 +69,11 @@ export async function upsertChapter(
 
             console.log("Upserting page ", page.id)
 
+            const { buffer, contentType } = await decrypt9truyen(page.image_url, page.drm_data)
             const tik = await transferTiktok(
-              await decrypt9truyen(page.image_url, page.drm_data),
+              buffer,
               cookie,
+              contentType,
               page.image_url
             )
 
