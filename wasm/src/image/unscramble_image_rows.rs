@@ -51,7 +51,7 @@ fn do_unscramble_image_rows(
     let mut out = Vec::new();
     {
         let mut cursor = Cursor::new(&mut out);
-        dst.write_to(&mut cursor, ImageFormat::Png)
+        dst.write_to(&mut cursor, ImageFormat::Jpeg)
             .map_err(|e| e.to_string())?;
     }
 
