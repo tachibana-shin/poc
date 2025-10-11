@@ -38,7 +38,8 @@ export interface Cookie {
 
 export async function transferTiktok(
   url: string | Uint8Array,
-  selectedCookie: Cookie
+  selectedCookie: Cookie,
+  urlBg?: string
 ) {
   const csrftoken = selectedCookie.cookies.find(
     item => item.name === "csrftoken"
@@ -101,6 +102,7 @@ export async function transferTiktok(
 
   const payload = JSON.parse(text)
   if (payload.code !== 0) {
+    if (payload.msg.includes("is not a valid image file")) console.log(urlBg)
     throw new TransferTiktokError(payload.msg)
   }
 

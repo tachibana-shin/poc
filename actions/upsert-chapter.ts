@@ -71,7 +71,8 @@ export async function upsertChapter(
 
             const tik = await transferTiktok(
               await decrypt9truyen(page.image_url, page.drm_data),
-              cookie
+              cookie,
+              page.image_url
             )
 
             return { page, image_info: tik.data.image_info, hash }
