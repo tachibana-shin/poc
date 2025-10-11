@@ -34,9 +34,11 @@ jobs:
           echo "${{ secrets.ENV_CONTENT }}" > .env
           echo ".env file created with secret content"
 
-      - name: Write cookie file
+      - name: Write cookie.json safely
         run: |
-          echo "${{ secrets.COOKIE }}" > cookie.json
+          cat <<'EOF' > cookie.json
+          ${{ secrets.COOKIE }}
+          EOF
 
       - name: Install dependencies
         run: bun install
