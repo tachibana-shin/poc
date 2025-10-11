@@ -1,0 +1,1 @@
+ALTER TABLE "teams" ALTER COLUMN "main_page_blocks" DROP NOT NULL;
