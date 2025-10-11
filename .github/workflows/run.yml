@@ -39,3 +39,13 @@ jobs:
 
       - name: Run index.ts
         run: bun index.ts
+
+      - name: Commit error.log if failed
+        if: failure() || cancelled()
+        run: |
+          echo "Committing error.log due to failure or cancel..."
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add error.log || true
+          git commit -m "🧩 Build failed — upload error.log [skip ci]" || true
+          git push origin HEAD:${{ github.ref_name }} || true
