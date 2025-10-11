@@ -6,6 +6,7 @@ import { upsertManga } from "./actions/upsert-manga"
 import { getManga, getMangaChapters } from "./apis/cuutruyen/[mangaId]"
 import { getRecently } from "./apis/cuutruyen/recently"
 import cookie from "./cookie.json" with { type: "json" }
+import { retryAsync } from "ts-retry"
 
 // console.log(
 //   await transferTiktok(
@@ -27,8 +28,8 @@ for (let i = 1; ; i++) {
 
         try {
           await upsertManga(
-            await getManga(`${manga.id}`),
-            await getMangaChapters(`${manga.id}`),
+            await retryAsync(() => getManga(`${manga.id}`), { maxTry: 10 }),
+            await retryAsync(() => getMangaChapters(`${manga.id}`), { maxTry: 10 }),
             cookie
           )
 

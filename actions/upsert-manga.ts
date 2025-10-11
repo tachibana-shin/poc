@@ -33,10 +33,10 @@ export async function upsertManga(
     // not found insert this
     // Run all transferTiktok in parallel
     const [cover, coverMobile, pano, panoMobile, teamId] = await Promise.all([
-      retryAsync(() => transferTiktok(manga.cover_url, cookie)),
-      retryAsync(() => transferTiktok(manga.cover_mobile_url, cookie)),
-      retryAsync(() => transferTiktok(manga.panorama_url, cookie)),
-      retryAsync(() => transferTiktok(manga.panorama_mobile_url, cookie)),
+      retryAsync(() => transferTiktok(manga.cover_url, cookie), { maxTry: 10 }),
+      retryAsync(() => transferTiktok(manga.cover_mobile_url, cookie), { maxTry: 10 }),
+      retryAsync(() => transferTiktok(manga.panorama_url, cookie), { maxTry: 10 }),
+      retryAsync(() => transferTiktok(manga.panorama_mobile_url, cookie), { maxTry: 10 }),
       upsertTeam(manga.team, cookie)
     ] as const)
 
@@ -68,10 +68,10 @@ export async function upsertManga(
       updated_at: new Date(new Date(manga.updated_at).getTime() - 1_0000)
     }
 
-    ;[lastUpdate] = await db
-      .insert(mangas)
-      .values(value)
-      .returning({ id: mangas.id, updated_at: mangas.updated_at })
+      ;[lastUpdate] = await db
+        .insert(mangas)
+        .values(value)
+        .returning({ id: mangas.id, updated_at: mangas.updated_at })
   } else {
     await db
       .update(mangas)

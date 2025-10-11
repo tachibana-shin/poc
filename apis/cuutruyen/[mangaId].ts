@@ -8,7 +8,7 @@ export async function getManga(mangaId: string): Promise<Manga> {
     const { data } = (await res.json()) as any
     return data as Manga
   } else {
-    throw new Error(`Failed to fetch manga info: ${await res.text()}`)
+    throw new Error(`Failed to fetch manga info: ${await res.text()} ${mangaId}`)
   }
 }
 
