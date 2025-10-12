@@ -15,8 +15,10 @@ import { retryAsync } from "ts-retry"
 //   )
 // )
 //
+const pageStart = Number.parseInt((await Bun.file("./page_ok.log").text()).split("\n").findLast((line) => !!line.trim())?.slice(1).trim() ?? '')
+if (Number.isNaN(pageStart)) throw new Error("page_ok.log format invalid")
 
-for (let i = 18; ; i++) {
+for (let i = pageStart + 1; ; i++) {
   const limit = pLimit(10)
 
   const mangas = await getRecently(i)
