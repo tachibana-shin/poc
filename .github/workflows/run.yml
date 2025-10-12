@@ -2,7 +2,11 @@ name: Manual Build (Bun + Rust + WASM)
 
 on:
   workflow_dispatch:
-
+    inputs:
+      http_proxy:
+        description: "Optional Http Proxy URL (example: https://proxy.com)"
+        required: false
+        default: ""
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,6 +59,8 @@ jobs:
         run: bun install
 
       - name: Run index.ts
+        env:
+          HTTP_PROXY: ${{ github.event.inputs.http_proxy }}
         run: bun index.ts
 
       - name: Commit error.log if failed
