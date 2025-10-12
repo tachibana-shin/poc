@@ -1,7 +1,7 @@
 # cuutruyen-crawler
 
 > [!CAUTION]
-> This is just PoC dont run this if you still cherish your data and your GitHub account
+> This is just a Proof of Concept (PoC). Do not run this, as it may put your data and GitHub account at risk.
 
 To install dependencies:
 
