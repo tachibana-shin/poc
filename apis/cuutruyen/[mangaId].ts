@@ -5,7 +5,9 @@ export async function getManga(mangaId: string): Promise<Manga> {
   const res = await fetch(`${baseUrl}/api/v2/mangas/${mangaId}`)
   if (res.ok) {
     // biome-ignore lint/suspicious/noExplicitAny: <false>
-    const { data } = (await res.json()) as any
+    const { data } = (await res.json()) as { data: Manga }
+    if (!Array.isArray(data.titles)) data.titles = [data.titles].filter(Boolean)
+
     return data as Manga
   } else {
     throw new Error(`Failed to fetch manga info: ${await res.text()} ${mangaId}`)
