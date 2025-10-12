@@ -414,3 +414,659 @@ params: 3384,Câu chuyện về cô nàng Sói đơn độc đã thu hút sự c
 params: 3359,Chó hoang,ad-site-i18n-sg/202510125d0d1e206e0ac5a74411bc38,ad-site-i18n-sg/202510125d0d01e94a269b594ee8acbb,ad-site-i18n-sg/202510125d0d91251b88fd004b81a678,ad-site-i18n-sg/202510125d0d911bb467ce2d43209135,#bdb9b9,#1d171a,,,https://x.com/shika_CkA?t=YIbxr49_a0y5cNF_YLhINw&s=09,false,true,503,false,24,{"{\"id\":7522,\"name\":\"Chó hoang\",\"primary\":true}"},2025-07-09T11:31:17.029Z,2025-07-13T12:00:00.075Z
 #2964(Sun Oct 12 2025 01:43:34 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
 params: 2964,Ngày nào cũng là lễ,ad-site-i18n-sg/202510125d0d52421d5ef2dc484290e0,ad-site-i18n-sg/202510125d0d8cfad7c1e2164ba080e5,ad-site-i18n-sg/202510125d0d7a7e0dad26d2495498ff,ad-site-i18n-sg/202510125d0dc5d91bc56ea3474883cc,#aeaba8,#121211,,,https://www.amazon.co.jp/dp/B0F2ZNLRJM,false,true,8469,false,349,{"{\"id\":6624,\"name\":\"Ngày nào cũng là lễ\",\"primary\":true}","{\"id\":7516,\"name\":\"Every Day is a Holiday\",\"primary\":false}"},2025-04-17T08:14:48.568Z,2025-07-19T06:30:03.300Z
+#3384(Sun Oct 12 2025 04:22:27 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3384,Câu chuyện về cô nàng Sói đơn độc đã thu hút sự chú ý của tôi,ad-site-i18n-sg/202510125d0d2197fcee88514d358e94,ad-site-i18n-sg/202510125d0de42a2a0910284f609c0b,ad-site-i18n-sg/202510125d0dbd2371043a0b43649582,ad-site-i18n-sg/202510125d0dd5927c3bbe494b94b73a,#89898a,#1d1d1a,,,https://mangadex.org/title/96bfcb17-aacc-470f-a5e3-ecf643f92112/a-story-about-a-lone-wolf-girl-who-caught-my-attention,false,true,3476,false,349,{"{\"id\":7584,\"name\":\"Câu chuyện về cô nàng Sói đơn độc đã thu hút sự chú ý của tôi\",\"primary\":true}","{\"id\":7585,\"name\":\"Ippiki Ookami na Onnanoko ga Kininaru Hanashi\",\"primary\":false}","{\"id\":7586,\"name\":\"A Story About a Lone Wolf Girl Who Caught My Attention\",\"primary\":false}"},2025-07-13T15:40:47.455Z,2025-09-19T22:14:57.449Z
+#2964(Sun Oct 12 2025 04:22:28 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2964,Ngày nào cũng là lễ,ad-site-i18n-sg/202510125d0d7114755f81214d589be4,ad-site-i18n-sg/202510125d0d637830784e304c0da5f9,ad-site-i18n-sg/202510125d0d818af0aa9c7948d288b9,ad-site-i18n-sg/202510125d0d7789392fce424b8dbbb4,#aeaba8,#121211,,,https://www.amazon.co.jp/dp/B0F2ZNLRJM,false,true,8469,false,349,{"{\"id\":6624,\"name\":\"Ngày nào cũng là lễ\",\"primary\":true}","{\"id\":7516,\"name\":\"Every Day is a Holiday\",\"primary\":false}"},2025-04-17T08:14:48.568Z,2025-07-19T06:30:03.300Z
+#3359(Sun Oct 12 2025 04:22:28 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3359,Chó hoang,ad-site-i18n-sg/202510125d0da2647086641040978982,ad-site-i18n-sg/202510125d0d79d7b7d3ec7743f3abce,ad-site-i18n-sg/202510125d0d47834aea523a42a6a5ee,ad-site-i18n-sg/202510125d0ddd0b8c4d5a1146f8b916,#bdb9b9,#1d171a,,,https://x.com/shika_CkA?t=YIbxr49_a0y5cNF_YLhINw&s=09,false,true,503,false,24,{"{\"id\":7522,\"name\":\"Chó hoang\",\"primary\":true}"},2025-07-09T11:31:17.029Z,2025-07-13T12:00:00.075Z
+#3300(Sun Oct 12 2025 04:36:39 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3300,Teru Teru Bozu of the Reiwa Era,ad-site-i18n-sg/202510125d0d75442a5f1eac429d8faf,ad-site-i18n-sg/202510125d0deb78f2a907b84b988543,ad-site-i18n-sg/202510125d0d4ebc72d2535349b0a392,ad-site-i18n-sg/202510125d0dddd625de77fa4cd69cab,#dfdfdf,#0e0e0e,,,https://mangadex.org/title/67538d82-7ade-4334-bd96-a097001cceff/teru-teru-bozu-of-the-reiwa-era,false,true,0,false,349,{"{\"id\":7373,\"name\":\"Teru Teru Bozu của Kỷ Nguyên Reiwa\",\"primary\":false}","{\"id\":7374,\"name\":\"Teru Teru Bozu of the Reiwa Era\",\"primary\":true}","{\"id\":7375,\"name\":\"Reiwa no Teru Teru Bozu\",\"primary\":false}"},2025-06-29T03:01:26.640Z,2025-07-03T16:07:29.537Z
+#3215(Sun Oct 12 2025 04:39:11 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3215,Leviathan,ad-site-i18n-sg/202510125d0d8fa41337f4524887834c,ad-site-i18n-sg/202510125d0d97afa99a7a6c4ed19510,ad-site-i18n-sg/202510125d0d38f2c52d4edb4544af85,ad-site-i18n-sg/202510125d0d61ac4f6400d542e88164,#060807,#694c45,Ichinose đang trên một con tàu vũ trụ để đi tham quan trong chuyến đi cuối kỳ, đột nhiên thiên thạch lao đến phá hủy một phần con tàu, vụ va chạm đã khiến phòng chứa bình oxy bị phá...,<p>Ichinose đang trên một con tàu vũ trụ để đi tham quan trong chuyến đi cuối kỳ, đột nhiên thiên thạch lao đến phá hủy một phần con tàu, vụ va chạm đã khiến phòng chứa bình oxy bị phá hủy, và tất cả thành viên trên tàu đều chỉ còn 50 tiếng trước khi chết ngạt do thiếu oxy. Liệu họ sẽ làm gì để sống sót! Hồi sau sẽ rõ.</p>,https://shonenjumpplus.com/episode/3270375685380251472,false,true,27037,false,349,{"{\"id\":7179,\"name\":\"Leviathan\",\"primary\":true}"},2025-06-09T10:59:52.277Z,2025-09-21T16:37:24.065Z
+#3206(Sun Oct 12 2025 05:10:54 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3206,Khi người tôi ngưỡng mộ cất lời với tôi...,ad-site-i18n-sg/202510125d0dcbd741578060498b84e6,ad-site-i18n-sg/202510125d0dc8755250479641378d65,ad-site-i18n-sg/202510125d0dfbeadaa42ebf44b78b47,ad-site-i18n-sg/202510125d0deaf25c16b6f14a1eb74a,#cac5c8,#07070c,,,https://x.com/ryokukablog/status/1915692279983136778,false,true,1005,false,637,{"{\"id\":7158,\"name\":\"Kouzuki-san to Mizukura-kun\",\"primary\":false}","{\"id\":7159,\"name\":\"Khi người tôi ngưỡng mộ cất lời với tôi...\",\"primary\":true}","{\"id\":7160,\"name\":\"One I Admire Speaks to Me\",\"primary\":false}"},2025-06-08T04:50:11.346Z,2025-08-21T12:46:27.514Z
+#3201(Sun Oct 12 2025 05:11:30 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3201,Suits,ad-site-i18n-sg/202510125d0df3efdfe818964cef8b98,ad-site-i18n-sg/202510125d0defab6c82b6d945efae1f,ad-site-i18n-sg/202510125d0dc06bd510c2624c14bdb0,ad-site-i18n-sg/202510125d0d5a104b9a8bf3493e95fc,#c0c0c0,#141414,,,,false,true,1010,false,349,{"{\"id\":7147,\"name\":\"Suits\",\"primary\":true}"},2025-06-07T15:16:52.091Z,2025-06-20T15:00:02.449Z
+#2925(Sun Oct 12 2025 05:19:55 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>cuutruyen5c844.site | 522: Connection timed out</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Connection timed out</span>
+                <span class="code-label">Error code 522</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_522&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-10-12 05:19:55 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_522&#38;utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_522&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">cuutruyen5c844.site</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The initial connection between Cloudflare's network and the origin web server timed out. As a result, the web page can not be displayed.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    
+                <h3 class="text-15 font-semibold mb-2">If you're a visitor of this website:</h3>
+                <p class="mb-6">Please try again in a few minutes.</p>
+
+                <h3 class="text-15 font-semibold mb-2">If you're the owner of this website:</h3>
+                <p><span>Contact your hosting provider letting them know your web server is not completing requests. An Error 522 means that the request was able to connect to your web server, but that the request didn't finish. The most likely cause is that something on your server is hogging resources.</span> <a rel="noopener noreferrer" href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-522/">Additional troubleshooting information here.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">98d424a73bfb16f9</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">172.184.219.82</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_522&#38;utm_campaign=cuutruyen5c844.site" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+#3183(Sun Oct 12 2025 05:21:48 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>cuutruyen5c844.site | 502: Bad gateway</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Bad gateway</span>
+                <span class="code-label">Error code 502</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-10-12 05:21:48 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">cuutruyen5c844.site</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The web server reported a bad gateway error.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    <p class="mb-6">Please try again in a few minutes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">98d427e1dae47af4</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">172.184.219.82</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+#1372(Sun Oct 12 2025 05:22:03 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>cuutruyen5c844.site | 502: Bad gateway</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Bad gateway</span>
+                <span class="code-label">Error code 502</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-10-12 05:22:03 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">cuutruyen5c844.site</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The web server reported a bad gateway error.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    <p class="mb-6">Please try again in a few minutes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">98d42841d83d7ac7</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">172.184.219.82</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+#3181(Sun Oct 12 2025 05:22:07 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>cuutruyen5c844.site | 502: Bad gateway</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Bad gateway</span>
+                <span class="code-label">Error code 502</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-10-12 05:22:07 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">cuutruyen5c844.site</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The web server reported a bad gateway error.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    <p class="mb-6">Please try again in a few minutes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">98d4285cacc27ac7</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">172.184.219.82</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+#3179(Sun Oct 12 2025 05:22:37 GMT+0000 (Coordinated Universal Time)): Error: Failed to fetch chapter info: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>cuutruyen5c844.site | 502: Bad gateway</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Bad gateway</span>
+                <span class="code-label">Error code 502</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-10-12 05:22:37 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&utm_campaign=cuutruyen5c844.site" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">cuutruyen5c844.site</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The web server reported a bad gateway error.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    <p class="mb-6">Please try again in a few minutes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">98d429182d5715d8</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">172.184.219.82</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_502&#38;utm_campaign=cuutruyen5c844.site" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+#1589(Sun Oct 12 2025 05:35:21 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "pages" ("id", "raw_id", "chapter_id", "order", "width", "height", "path", "hash", "size", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, default, default)
+params: 1243844,7905,1,905,1280,ad-site-i18n-sg/202510125d0d6cc10691b9144b1384a0,722689d0cbce41a821e7fcc8334cdfaf8670b8e1e920372a9971fee296b871d6,190235
+#3087(Sun Oct 12 2025 06:21:20 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3087,Date or Kill: Secret Matching,ad-site-i18n-sg/202510125d0d7305cc604d0c42e3964a,ad-site-i18n-sg/202510125d0d977d1fd0ac8042e79b39,ad-site-i18n-sg/202510125d0d50314df800b149e6bb20,ad-site-i18n-sg/202510125d0db48dccdb1a2b4b5a8e69,#300e27,#ba9ca9,Ayame, một sát thủ hàng đầu đã sống 25 năm mà không biết gì về tình yêu, được một đồng nghiệp thuyết phục đăng ký trên một ứng dụng hẹn hò trong khi vẫn che giấu danh tính thực sự...,<p>Ayame, một sát thủ hàng đầu đã sống 25 năm mà không biết gì về tình yêu, được một đồng nghiệp thuyết phục đăng ký trên một ứng dụng hẹn hò trong khi vẫn che giấu danh tính thực sự của mình!<br>Cuối cùng, cô ấy lại ghép đôi với không ai khác ngoài mục tiêu tiếp theo của mình: Murai, thủ lĩnh trẻ tuổi tàn nhẫn và lạnh lùng của một băng đảng...!?<br>Một bộ phim hài tình yêu giả tạo, nơi mọi thứ sẽ kết thúc nếu bí mật của cô ấy bị tiết lộ!!</p>,https://www.ganganonline.com/title/1890,false,true,2558,false,349,{"{\"id\":6875,\"name\":\"Date or Kill: Secret Matching\",\"primary\":true}","{\"id\":6876,\"name\":\"Date or Kill: Himitsu no Matching\",\"primary\":false}","{\"id\":6877,\"name\":\"デート・オア・キル～秘密のマッチング～\",\"primary\":false}"},2025-05-18T13:57:32.845Z,2025-07-17T08:30:11.480Z
+#3075(Sun Oct 12 2025 06:22:57 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3075,Ashi Dribbles Through,ad-site-i18n-sg/202510125d0dfb61ea3187264a2990ef,ad-site-i18n-sg/202510125d0da05b56cab2c247cf9ad3,ad-site-i18n-sg/202510125d0dd283582bf18040449dfb,ad-site-i18n-sg/202510125d0d3ee5fe3ee6474662b6ca,#a8adac,#222221,,,,false,true,501,false,485,{"{\"id\":6853,\"name\":\"Ashi Dribbles Through\",\"primary\":true}"},2025-05-16T13:14:07.363Z,2025-05-20T16:30:04.913Z
+#2590(Sun Oct 12 2025 06:51:41 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2590,Ngày ba bữa do Lisa nấu,ad-site-i18n-sg/202510125d0df32d391fbacb4a8ca5a0,ad-site-i18n-sg/202510125d0d57bc47844a88488e8650,ad-site-i18n-sg/202510125d0dea16e71071254b6095fa,ad-site-i18n-sg/202510125d0d040665fec34944bc975b,#ec681e,#f9eddb,,,https://www.melonbooks.co.jp/detail/detail.php?product_id=472832,false,true,3035,false,24,{"{\"id\":5840,\"name\":\"Ngày ba bữa do Lisa nấu\",\"primary\":true}"},2024-12-13T16:52:57.730Z,2025-07-10T15:00:02.590Z
+#3023(Sun Oct 12 2025 06:54:32 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 3023,Tôi và (những) cô bạn gái yandere của mình.,ad-site-i18n-sg/202510125d0d5383b81953ea49aaad6d,ad-site-i18n-sg/202510125d0da0f56f809f8b43548b70,ad-site-i18n-sg/202510125d0d2fcdc92f948a41c68dc0,ad-site-i18n-sg/202510125d0dce4fd15354144ec4b755,#d2d2d2,#0b0b0b,,,https://x.com/kugatu28/status/1536619765652893697,false,true,3677,false,101,{"{\"id\":6750,\"name\":\"Tôi và (những) cô bạn gái yandere của mình.\",\"primary\":true}","{\"id\":6751,\"name\":\"Ore to Yandere na Kanojotachi\",\"primary\":false}","{\"id\":6752,\"name\":\"Me and My Yandere Girlfriend(s)\",\"primary\":false}"},2025-05-03T05:34:15.802Z,2025-09-21T09:17:23.014Z
+#2997(Sun Oct 12 2025 07:04:19 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2997,Cuộc sống thường ngày của em vàng chị bạc và Aruka-chan,ad-site-i18n-sg/202510125d0daaed2806eccc411bb48a,ad-site-i18n-sg/202510125d0d6cdd06f7ea8840bfb269,ad-site-i18n-sg/202510125d0da964b4fc55954874886f,ad-site-i18n-sg/202510125d0d9c9e638c7fad412db47d,#c3c3c3,#151515,,,,false,true,1009,false,349,{"{\"id\":6694,\"name\":\"Cuộc sống thường ngày của em vàng chị bạc và Aruka-chan\",\"primary\":true}","{\"id\":6695,\"name\":\"TS Aruka-chan to Kinin Shimai no Nichijou\",\"primary\":false}"},2025-04-26T15:11:38.042Z,2025-06-29T13:54:51.462Z
+#2843(Sun Oct 12 2025 07:32:46 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2843,The Marshal King,ad-site-i18n-sg/202510125d0db3f45d09d39a45db86ea,ad-site-i18n-sg/202510125d0d819c1e112d4e47a19b7a,ad-site-i18n-sg/202510125d0d5d6cebae611340adba96,ad-site-i18n-sg/202510125d0d335bb38baf584637ba2c,#af989d,#67381e,Không ai trên lục địa này chưa từng nghe về những hành động xấu xa của tên tội phạm vĩ đại M. Godspeed. Nhưng một ngày nọ, một chàng trai trẻ tự nhận là con trai của tên tội phạm...,<p>Không ai trên lục địa này chưa từng nghe về những hành động xấu xa của tên tội phạm vĩ đại M. Godspeed. Nhưng một ngày nọ, một chàng trai trẻ tự nhận là con trai của tên tội phạm đột nhiên xuất hiện và đi bộ qua sa mạc khắc nghiệt. Jim Godspeed này nói rằng anh ta đã giết cha mình và có xác chết để chứng minh điều đó!</p>,,false,true,5149,false,263,{"{\"id\":6341,\"name\":\"The Marshal King\",\"primary\":true}"},2025-03-06T13:06:52.588Z,2025-06-24T00:59:57.868Z
+#2918(Sun Oct 12 2025 07:38:27 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2918,Ngôi sao lạc lối polaris Ab ,ad-site-i18n-sg/202510125d0d8fb907e3221543839db6,ad-site-i18n-sg/202510125d0dff95710aec2d4ed1990d,ad-site-i18n-sg/202510125d0dc1c87f4cba6b43a68810,ad-site-i18n-sg/202510125d0d2c1c48364a284cf3aeed,#edeef1,#272a50,,,https://twitter.com/No37_bucho,false,true,501,false,24,{"{\"id\":6509,\"name\":\"Ngôi sao lạc lối polaris Ab \",\"primary\":true}"},2025-04-02T12:25:12.106Z,2025-04-06T07:00:05.557Z
+#2319(Sun Oct 12 2025 07:42:28 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2319,BanG Dream! Garupa PICO Comic Anthology,ad-site-i18n-sg/202510125d0d864d1eafee7a4d0f83e2,ad-site-i18n-sg/202510125d0de17ef48237fe415787b1,ad-site-i18n-sg/202510125d0dc7d134b4ceca4fe8b281,ad-site-i18n-sg/202510125d0d4caea9674f1945bb8ab8,#f8dc9d,#f7ac20,,,https://www.amazon.co.jp/dp/B08K8FLHSB,false,true,0,false,24,{"{\"id\":5276,\"name\":\"BanG Dream! Garupa PICO Comic Anthology\",\"primary\":true}"},2024-10-06T14:54:47.180Z,2025-03-25T13:11:21.186Z
+#2883(Sun Oct 12 2025 07:48:15 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2883,Josou Mae Josou Ato,ad-site-i18n-sg/202510125d0d895d201b87ab4740816e,ad-site-i18n-sg/202510125d0d1f5096c1c1ca40a7b431,ad-site-i18n-sg/202510125d0d5ca8b95c048445f0b527,ad-site-i18n-sg/202510125d0dfc530ee85b86474bb4c1,#afafcf,#302e64,,,,false,true,1562,false,485,{"{\"id\":6430,\"name\":\"Josou Mae Josou Ato\",\"primary\":true}"},2025-03-21T13:11:25.614Z,2025-04-19T11:00:02.219Z
+#2870(Sun Oct 12 2025 07:53:36 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2870,Ai no Senbiki ~Mamakatsu Shitara Mama ga Dekita Hanashi~,ad-site-i18n-sg/202510125d0ddd6d23f476b24185b78d,ad-site-i18n-sg/202510125d0d893dc8214abe40fda797,ad-site-i18n-sg/202510125d0d9f6e4b1e10454eb3b2ee,ad-site-i18n-sg/202510125d0db4175b3e8a1045deab28,#a2857c,#241f19,Nhân vật chính là một nam sinh trung học tên Hikawa Jun, người đã mất mẹ khi sinh ra đời. Cậu ấy lườm đứa bạn cùng lớp phàn nàn về người mẹ bảo bọc quá mức của mình và không...,<p>Nhân vật chính là một nam sinh trung học tên Hikawa Jun, người đã mất mẹ khi sinh ra đời. Cậu ấy lườm đứa bạn cùng lớp phàn nàn về người mẹ bảo bọc quá mức của mình và không biết sẽ như nào nếu bản thân có mẹ. Câu chuyện bắt đầu khi Jun, người khao khát hơi ấm của người mẹ, khai gian tuổi và hẹn hò với một người lạ trên app hẹn hò với sugar mama</p><p>Sản phẩm hợp tác với Fotasl</p>,https://comic-walker.com/detail/KC_005906_S?episodeType=first,false,true,3204,false,485,{"{\"id\":6402,\"name\":\"Ai no Senbiki ~Mamakatsu Shitara Mama ga Dekita Hanashi~\",\"primary\":true}"},2025-03-15T09:08:39.674Z,2025-09-25T00:37:25.809Z
+#1316(Sun Oct 12 2025 08:17:57 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 1316,DEAD ROCK,ad-site-i18n-sg/202510125d0d51563749fd984015839d,ad-site-i18n-sg/202510125d0dc2cc38538afe44508aa0,ad-site-i18n-sg/202510125d0d10d53377a0c9478c829e,ad-site-i18n-sg/202510125d0de117b2ea1a0140289c90,#724752,#130c16,DEAD ROCK sẽ lấy bối cảnh một là một thế giới giả tưởng đen tối về các loài quỷ và Dead Rock – nơi đào tạo của các Quỷ vương – bộ truyện sẽ tập trung vào việc theo dõi...,<p>DEAD ROCK sẽ lấy bối cảnh một là một thế giới giả tưởng đen tối về các loài quỷ và Dead Rock – nơi đào tạo của các Quỷ vương – bộ truyện sẽ tập trung vào việc theo dõi Yakuto khi anh ta cố gắng tham gia học viện Dead Rock.</p>,,false,true,18389,false,349,{"{\"id\":3217,\"name\":\"DEAD ROCK\",\"primary\":true}"},2023-07-06T15:56:44.862Z,2025-07-18T15:30:03.630Z
+#2799(Sun Oct 12 2025 08:30:13 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2799,I won't Give in to my Sister's Friends,ad-site-i18n-sg/202510125d0d6df1671b46434990b076,ad-site-i18n-sg/202510125d0d43ae38287abe45739015,ad-site-i18n-sg/202510125d0d40f7ad708cfe4099a1b8,ad-site-i18n-sg/202510125d0d56b052996f2e455ab607,#afafcf,#302e64,,,https://tonarinoyj.jp/episode/2550912964518305632,false,true,2630,false,485,{"{\"id\":6260,\"name\":\"I won't Give in to my Sister's Friends\",\"primary\":true}"},2025-02-21T15:37:53.894Z,2025-06-27T17:30:05.159Z
+#2791(Sun Oct 12 2025 08:41:00 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2791,Kugare no uta,ad-site-i18n-sg/202510125d0dafc059278b6143e492d8,ad-site-i18n-sg/202510125d0d626483b970694ec9bcbb,ad-site-i18n-sg/202510125d0d60fcbe1f2b804c61a8be,ad-site-i18n-sg/202510125d0d73b759d67e4c4a18a587,#888888,#111111,,,https://pocket.shonenmagazine.com/episode/13933686331794969852#,false,true,1578,false,349,{"{\"id\":6246,\"name\":\"Kugare no uta\",\"primary\":true}","{\"id\":6247,\"name\":\"Bài ca của sứa\",\"primary\":false}"},2025-02-20T11:06:32.284Z,2025-07-20T13:59:52.578Z
+#2786(Sun Oct 12 2025 08:41:00 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2786,Under Ninja,ad-site-i18n-sg/202510125d0d934367be9dd943b296a8,ad-site-i18n-sg/202510125d0d9f5f6c464b40409da6ee,ad-site-i18n-sg/202510125d0d9b9ee529c9d64451bd1d,ad-site-i18n-sg/202510125d0de6b70d8afa114c52b808,#979797,#0f0f0f,Những ninja Nhật Bản từng nổi tiếng một thời, đã bị GHQ giải thể và xóa bỏ sau Thế chiến II. Tuy nhiên, thực tế là ninja vẫn bí mật tồn tại cho đến ngày nay, và số lượng của...,<p>Những ninja Nhật Bản từng nổi tiếng một thời, đã bị GHQ giải thể và xóa bỏ sau Thế chiến II. Tuy nhiên, thực tế là ninja vẫn bí mật tồn tại cho đến ngày nay, và số lượng của họ được cho là lên tới 200.000 người. Một số ninja tinh nhuệ đã âm thầm tham gia vào các hoạt động ngầm sau những cuộc xung đột ở cấp quốc gia. Mặt khác, những ninja cấp thấp thường gặp khó khăn trong việc tìm công việc, và một trong số đó, Kurogakure Kurou, sống gần như là một NEET. Tuy nhiên, cuối cùng một "nhiệm vụ ninja" quan trọng đã đến với anh...!</p>,https://yanmaga.jp/comics/%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B8%E3%83%A3,false,true,1011,false,431,{"{\"id\":6237,\"name\":\"Under Ninja\",\"primary\":true}"},2025-02-17T16:29:25.596Z,2025-05-03T10:00:31.515Z
+#2747(Sun Oct 12 2025 09:00:44 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2747,Convenient April Fool  ,ad-site-i18n-sg/202510125d0d8a86bf2f53a14604bd08,ad-site-i18n-sg/202510125d0dee3af8e7a9ce4d449d50,ad-site-i18n-sg/202510125d0de13eb8bf501f430d9c83,ad-site-i18n-sg/202510125d0d9658341c39ab4a93b9f8,#bebebe,#131313,,,https://mangadex.org/,false,true,2019,false,349,{"{\"id\":6160,\"name\":\"Convenient April Fool  \",\"primary\":true}"},2025-02-04T15:40:40.672Z,2025-07-13T14:00:12.384Z
+#2742(Sun Oct 12 2025 09:01:41 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2742,This Irreplaceable Hell,ad-site-i18n-sg/202510125d0dc4c118a01f724b1a8e39,ad-site-i18n-sg/202510125d0df74e73be53624f948ee6,ad-site-i18n-sg/202510125d0d47ffe1ea8ee04c78b848,ad-site-i18n-sg/202510125d0d262dc01f5cc74431a09f,#a88e91,#3d0a25,,,https://mangadex.org/,false,true,2023,false,349,{"{\"id\":6153,\"name\":\"This Irreplaceable Hell\",\"primary\":true}"},2025-02-04T06:12:29.375Z,2025-07-25T22:06:48.025Z
+#2731(Sun Oct 12 2025 09:03:38 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2731,Floating mate,ad-site-i18n-sg/202510125d0da335e52d0c23443783ed,ad-site-i18n-sg/202510125d0d7c5a74804b5a496493eb,ad-site-i18n-sg/202510125d0dcb33618ba365433a9838,ad-site-i18n-sg/202510125d0dc349ba767654496a9316,#939393,#0a0a0a,Câu chuyện về hai ngày bình thường nhưng cũng thật đặc biệt với hai cô cậu học sinh đã không tham dự chuyến ngoại khoá của trường.,<p>Câu chuyện về hai ngày bình thường nhưng cũng thật đặc biệt với hai cô cậu học sinh đã không tham dự chuyến ngoại khoá của trường.</p>,https://shonenjumpplus.com/episode/17106567262866021686,false,true,1021,false,349,{"{\"id\":6136,\"name\":\"Floating mate\",\"primary\":true}","{\"id\":6137,\"name\":\"The left behind pair\",\"primary\":false}"},2025-02-02T12:59:10.780Z,2025-04-19T18:00:02.088Z
+#2724(Sun Oct 12 2025 09:17:04 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2724,Ninkyou Kanojo,ad-site-i18n-sg/202510125d0d9349b48611d045a89d0f,ad-site-i18n-sg/202510125d0db5dc435e63fc4f40a023,ad-site-i18n-sg/202510125d0d266989deb8564e0ea1e2,ad-site-i18n-sg/202510125d0dd9dd95cf891c4d23ae63,#d4d4d4,#030303,,,https://web-ace.jp/youngaceup/contents/1000220/episode/9342/,false,true,1004,false,233,{"{\"id\":6119,\"name\":\"Ninkyou Kanojo\",\"primary\":true}"},2025-01-29T09:14:32.930Z,2025-09-22T05:17:11.434Z
+#2445(Sun Oct 12 2025 09:40:04 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "mangas" ("id", "raw_id", "name", "cover_url", "cover_mobile_url", "panorama_url", "panorama_mobile_url", "panorama_dominant_color", "panorama_dominant_color_2", "description", "full_description", "official_url", "is_region_limited", "is_ads", "views_count", "is_nsfw", "team", "titles", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19) returning "id", "updated_at"
+params: 2445,Crawling Dreams(webtoon),ad-site-i18n-sg/202510125d0d8a929a0c163c4f649652,ad-site-i18n-sg/202510125d0d7b326c8aacde4ce7bb86,ad-site-i18n-sg/202510125d0d8166e7f569d84a7383df,ad-site-i18n-sg/202510125d0dfb3fabacd4ff46718e4b,#400940,#cca6be,,,https://www.webtoons.com/en/challenge/crawling-dreams/list?title_no=141539,false,true,35243,false,120,{"{\"id\":5529,\"name\":\"Crawling Dreams(webtoon)\",\"primary\":true}"},2024-10-27T14:36:58.266Z,2025-07-21T19:37:14.143Z
+#2643(Sun Oct 12 2025 09:40:41 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "tags" ("id", "name", "slug", "created_at") values (default, $1, $2, default) on conflict ("slug") do update set "name" = $3, "slug" = $4 returning "id"
+params: slice of life,slice-of-life,slice of life,slice-of-life
