@@ -1,5 +1,8 @@
 # cuutruyen-crawler
 
+> [!CAUTION]
+> This is just PoC dont run this if you still cherish your data and your GitHub account
+
 To install dependencies:
 
 ```bash
