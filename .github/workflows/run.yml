@@ -38,7 +38,7 @@ jobs:
       - name: Build WASM
         if: steps.cache-wasm.outputs.cache-hit != 'true'
         working-directory: wasm
-        run: sh build.sh
+        run: cargo install wasm-pack && sh build.sh
 
       - name: Write environment file
         run: |
