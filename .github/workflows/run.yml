@@ -19,15 +19,26 @@ jobs:
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Setup wasm-pack
-        run: |
-          cargo install wasm-pack --locked
+      - name: Cache Cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            wasm/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('wasm/Cargo.lock') }}
+
+      - name: Cache wasm/pkg
+        id: cache-wasm
+        uses: actions/cache@v4
+        with:
+          path: wasm/pkg
+          key: ${{ runner.os }}-wasm-${{ hashFiles('wasm/Cargo.toml', 'wasm/Cargo.lock', 'wasm/src/**/*.rs') }}
 
       - name: Build WASM
+        if: steps.cache-wasm.outputs.cache-hit != 'true'
         working-directory: wasm
-        run: |
-          echo "Building WASM using wasm-pack..."
-          sh build.sh
+        run: sh build.sh
 
       - name: Write environment file
         run: |
