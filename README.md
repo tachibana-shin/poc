@@ -1,5 +1,8 @@
 # cuutruyen-crawler
 
+> [!CAUTION]
+> This is just a Proof of Concept (PoC). Do not run this, as it may put your data and GitHub account at risk.
+
 To install dependencies:
 
 ```bash
