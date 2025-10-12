@@ -16,7 +16,7 @@ import { retryAsync } from "ts-retry"
 // )
 //
 
-for (let i = 4; ; i++) {
+for (let i = 18; ; i++) {
   const limit = pLimit(10)
 
   const mangas = await getRecently(i)
