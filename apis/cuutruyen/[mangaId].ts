@@ -18,12 +18,13 @@ export async function getManga(mangaId: string): Promise<Manga> {
 
 export async function getMangaChapters(
   mangaId: string
-): Promise<MangaChapter[]> {
+): Promise<{ data: MangaChapter[]; done: boolean }> {
   const res = await fetch(`${baseUrl}/api/v2/mangas/${mangaId}/chapters`)
   if (res.ok) {
     // biome-ignore lint/suspicious/noExplicitAny: <false>
-    const { data } = (await res.json()) as any
-    return data as MangaChapter[]
+    const { data } = (await res.json()) as { data: MangaChapter[] }
+    const filtered = data.filter(chapter => chapter.status !== "enqueued")
+    return { data: filtered, done: data.length === filtered.length }
   } else {
     throw new Error(`Failed to fetch manga chapters: ${await res.text()}`)
   }

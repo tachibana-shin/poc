@@ -14,7 +14,7 @@ import { upsertTeam } from "./upsert-team"
 
 export async function upsertManga(
   manga: Manga,
-  chapters: MangaChapter[],
+  { data: chapters, done: chaptersOk }: { data: MangaChapter[]; done: boolean },
   cookie: Cookie
 ): Promise<boolean> {
   let [lastUpdate] = await db
@@ -162,12 +162,13 @@ export async function upsertManga(
     )
   )
 
-  await db
-    .update(mangas)
-    .set({
-      updated_at: new Date(manga.updated_at)
-    })
-    .where(eq(mangas.id, lastUpdate.id))
+  if (chaptersOk)
+    await db
+      .update(mangas)
+      .set({
+        updated_at: new Date(manga.updated_at)
+      })
+      .where(eq(mangas.id, lastUpdate.id))
 
   return true
 }

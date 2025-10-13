@@ -62,6 +62,7 @@ export async function upsertChapter(
         retryAsync(
           async () => {
             const exists = pagesDb.find(p => p.raw_id === page.id)
+
             const hash = sha256(page.image_url)
             if (exists && hash === exists.hash) {
               return false
