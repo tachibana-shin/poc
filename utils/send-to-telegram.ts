@@ -7,13 +7,14 @@ assert(TELEGRAM_BOT_TOKEN, "Missing TELEGRAM_BOT_TOKEN")
 assert(TELEGRAM_CHAT_ID, "Missing TELEGRAM_CHAT_ID")
 
 // 🧩 Telegram にメッセージを送る関数
-export async function sendToTelegram(text: string, file?: File) {
+export async function sendToTelegram(text: string, file?: File, { notify }: { notify: boolean } = { notify: true }) {
   const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
 
   const payload = {
     chat_id: TELEGRAM_CHAT_ID,
     text,
-    parse_mode: "Markdown"
+    parse_mode: "Markdown",
+    disable_notification: notify
   }
 
   try {
@@ -32,6 +33,7 @@ export async function sendToTelegram(text: string, file?: File) {
       form.append("caption", "📜 Build log (full)")
       form.append("document", new Blob([file]), file.name)
       form.append("reply_to_message_id", `${message_id}`)
+      form.append("disable_notification", "true")
 
       await fetch(
         `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument`,

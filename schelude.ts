@@ -78,7 +78,11 @@ async function done() {
     fail.map(makeError).join("\n") || "_none_"
   ].join("\n")
 
-  await sendToTelegram(summary.join("\n"), new File([fullLog], "build-log.md"))
+  await sendToTelegram(
+    summary.join("\n"),
+    new File([fullLog], "build-log.md"),
+    { notify: success.length > 0 || fail.length > 0 }
+  )
 
   console.log("✅ Sent result to Telegram")
   process.exit(0)
