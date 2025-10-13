@@ -9,7 +9,7 @@ import { type Cookie, transferTiktok } from "./transfer-tiktok"
 
 const teamsStore = new Map<number, number>()
 export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
-  if (teamsStore.has(team.id)) return teamsStore.get(team.id)!;
+  if (teamsStore.has(team.id)) return teamsStore.get(team.id)!
 
   let [lastUpdate] = await db
     .select({ id: teams.id, updated_at: teams.updated_at })
@@ -43,14 +43,14 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
     created_at: new Date(team.created_at),
     updated_at: new Date(team.updated_at)
   }
-    ;[lastUpdate] = await db
-      .insert(teams)
-      .values(value)
-      .onConflictDoUpdate({
-        target: [teams.slug],
-        set: value
-      })
-      .returning({ id: teams.id, updated_at: teams.updated_at })
+  ;[lastUpdate] = await db
+    .insert(teams)
+    .values(value)
+    .onConflictDoUpdate({
+      target: [teams.slug],
+      set: value
+    })
+    .returning({ id: teams.id, updated_at: teams.updated_at })
 
   assert(lastUpdate, "Team ID is null")
   teamsStore.set(team.id, lastUpdate.id)

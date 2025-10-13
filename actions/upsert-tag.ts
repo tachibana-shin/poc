@@ -6,7 +6,7 @@ import { tags } from "../db/schema"
 
 const tagsStore = new Map<string, number>()
 export async function upsertTag(tag: MangaTag) {
-  if (tagsStore.has(tag.name)) return tagsStore.get(tag.name)!;
+  if (tagsStore.has(tag.name)) return tagsStore.get(tag.name)!
 
   const value: typeof tags.$inferInsert = {
     name: tag.name,

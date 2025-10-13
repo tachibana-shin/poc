@@ -6,7 +6,7 @@ import { authors } from "../db/schema"
 
 const authorsStore = new Map<string, number>()
 export async function upsertAuthor(author: MangaAuthor) {
-  if (authorsStore.has(author.name)) return authorsStore.get(author.name)!;
+  if (authorsStore.has(author.name)) return authorsStore.get(author.name)!
 
   const value: typeof authors.$inferInsert = {
     name: author.name,
