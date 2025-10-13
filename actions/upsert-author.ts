@@ -4,7 +4,10 @@ import type { MangaAuthor } from "../apis/cuutruyen/types/manga"
 import { db } from "../db"
 import { authors } from "../db/schema"
 
+const authorsStore = new Map<string, number>()
 export async function upsertAuthor(author: MangaAuthor) {
+  if (authorsStore.has(author.name)) return authorsStore.get(author.name)!;
+
   const value: typeof authors.$inferInsert = {
     name: author.name,
     slug: slug(author.name)
@@ -20,6 +23,7 @@ export async function upsertAuthor(author: MangaAuthor) {
     .returning({ id: authors.id })
 
   assert(authorId, "Author ID is null")
+  authorsStore.set(author.name, authorId.id)
 
   return authorId.id
 }
