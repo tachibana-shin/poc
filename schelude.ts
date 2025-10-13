@@ -66,21 +66,24 @@ async function done() {
     if (failCount > limitPreview)
       summary.push(`...and ${failCount - limitPreview} more`)
   }
-  const fullLog = [
-    "# 📦 Build Log\n",
-    `**Page:** ${lastPage}`,
-    `**Success:** ${okCount}`,
-    `**Enqueued:** ${success.filter(x => x.status === UpsertMangaStatus.inEnqueued).length}`,
-    `**Failed:** ${failCount}`,
-    "\n## ✅ Success List",
-    success.map(makeSuccess).join("\n") || "_none_",
-    "\n## ❌ Fail List",
-    fail.map(makeError).join("\n") || "_none_"
-  ].join("\n")
+  const fullLog =
+    success.length > limitPreview || fail.length > limitPreview
+      ? [
+          "# 📦 Build Log\n",
+          `**Page:** ${lastPage}`,
+          `**Success:** ${okCount}`,
+          `**Enqueued:** ${success.filter(x => x.status === UpsertMangaStatus.inEnqueued).length}`,
+          `**Failed:** ${failCount}`,
+          "\n## ✅ Success List",
+          success.map(makeSuccess).join("\n") || "_none_",
+          "\n## ❌ Fail List",
+          fail.map(makeError).join("\n") || "_none_"
+        ].join("\n")
+      : null
 
   await sendToTelegram(
     summary.join("\n"),
-    new File([fullLog], "build-log.md"),
+    fullLog ? new File([fullLog], "build-log.md") : void 0,
     { notify: success.length > 0 || fail.length > 0 }
   )
 
