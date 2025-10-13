@@ -68,6 +68,8 @@ for (let i = pageStart + 1; ; i++) {
   await writeFile("page_ok.log", `#${i}\n`, {
     flag: "a"
   })
+
+  if (mangas._metadata.current_page >= mangas._metadata.total_pages) break
 }
 // await upsertManga(
 //   await getManga("3758"),

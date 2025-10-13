@@ -12,11 +12,17 @@ import { upsertChapter } from "./upsert-chapter"
 import { upsertTag } from "./upsert-tag"
 import { upsertTeam } from "./upsert-team"
 
+export enum UpsertMangaStatus {
+  noUpdate,
+  Updated,
+  inEnqueued
+}
+
 export async function upsertManga(
   manga: Manga,
   { data: chapters, done: chaptersOk }: { data: MangaChapter[]; done: boolean },
   cookie: Cookie
-): Promise<boolean> {
+): Promise<UpsertMangaStatus> {
   let [lastUpdate] = await db
     .select({ id: mangas.id, updated_at: mangas.updated_at })
     .from(mangas)
@@ -27,7 +33,7 @@ export async function upsertManga(
     lastUpdate &&
     lastUpdate.updated_at.getTime() >= new Date(manga.updated_at).getTime()
   )
-    return false
+    return UpsertMangaStatus.noUpdate
 
   if (!lastUpdate) {
     // not found insert this
@@ -36,18 +42,18 @@ export async function upsertManga(
       retryAsync(() => transferTiktok(manga.cover_url, cookie), { maxTry: 10 }),
       manga.cover_mobile_url
         ? retryAsync(() => transferTiktok(manga.cover_mobile_url!, cookie), {
-            maxTry: 10
-          })
+          maxTry: 10
+        })
         : null,
       manga.panorama_url
         ? retryAsync(() => transferTiktok(manga.panorama_url!, cookie), {
-            maxTry: 10
-          })
+          maxTry: 10
+        })
         : null,
       manga.panorama_mobile_url
         ? retryAsync(() => transferTiktok(manga.panorama_mobile_url!, cookie), {
-            maxTry: 10
-          })
+          maxTry: 10
+        })
         : null,
       upsertTeam(manga.team, cookie)
     ] as const)
@@ -80,10 +86,10 @@ export async function upsertManga(
       updated_at: new Date(new Date(manga.updated_at).getTime() - 1_0000)
     }
 
-    ;[lastUpdate] = await db
-      .insert(mangas)
-      .values(value)
-      .returning({ id: mangas.id, updated_at: mangas.updated_at })
+      ;[lastUpdate] = await db
+        .insert(mangas)
+        .values(value)
+        .returning({ id: mangas.id, updated_at: mangas.updated_at })
   } else {
     await db
       .update(mangas)
@@ -170,5 +176,5 @@ export async function upsertManga(
       })
       .where(eq(mangas.id, lastUpdate.id))
 
-  return true
+  return chaptersOk ? UpsertMangaStatus.Updated : UpsertMangaStatus.inEnqueued
 }

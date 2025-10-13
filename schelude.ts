@@ -1,13 +1,13 @@
 import pLimit from "p-limit"
 import { transferTiktok } from "./actions/transfer-tiktok"
-import { upsertManga } from "./actions/upsert-manga"
+import { upsertManga, UpsertMangaStatus } from "./actions/upsert-manga"
 import { getManga, getMangaChapters } from "./apis/cuutruyen/[mangaId]"
 import { getRecently } from "./apis/cuutruyen/recently"
 import cookie from "./cookie.json" with { type: "json" }
 import { retryAsync } from "ts-retry"
 import { sendToTelegram } from "./utils/send-to-telegram"
 
-const success: { id: number; name: string }[] = []
+const success: { id: number; name: string; status: UpsertMangaStatus }[] = []
 const fail: { id: number; name: string; error: string }[] = []
 let lastPage = 1
 
@@ -38,13 +38,14 @@ async function done() {
     `📦 *Build Completed*`,
     `Page: ${lastPage}`,
     `✅ Success: ${okCount}`,
+    `🌵 Enqueued: ${success.filter(x => x.status === UpsertMangaStatus.inEnqueued).length}`,
     `❌ Failed: ${failCount}`,
     ""
   ]
 
   if (okCount) {
     summary.push(`✅ *Success List:*`)
-    summary.push(...success.slice(0, 10).map(x => `• #${x.id} - \`${x.name}\``))
+    summary.push(...success.slice(0, 10).map(x => `• #${x.id}${x.status === UpsertMangaStatus.inEnqueued ? ' - [⌛]' : ''} \`${x.name}\``))
     if (okCount > 10) summary.push(`...and ${okCount - 10} more`)
     summary.push("")
   }
@@ -62,11 +63,12 @@ async function done() {
     "# 📦 Build Log\n",
     `**Page:** ${lastPage}`,
     `**Success:** ${okCount}`,
+    `**Enqueued:** ${success.filter(x => x.status === UpsertMangaStatus.inEnqueued).length}`,
     `**Failed:** ${failCount}`,
     "\n## ✅ Success List",
-    success.map(x => `- ${x.name} (#${x.id})`).join("\n") || "_none_",
+    success.map(x => `- #${x.id}${x.status === UpsertMangaStatus.inEnqueued ? ' - [⌛]' : ''} (\`${x.name}\`)`).join("\n") || "_none_",
     "\n## ❌ Fail List",
-    fail.map(x => `- ${x.name}: ${x.error}`).join("\n") || "_none_"
+    fail.map(x => `- #${x.id} (\`${x.name}\`): ${x.error}`).join("\n") || "_none_"
   ].join("\n")
 
   await sendToTelegram(summary.join("\n"), new File([fullLog], "build-log.md"))
@@ -101,12 +103,12 @@ for (let i = 1; ; i++) {
             cookie
           )
 
-          success.push({ id: manga.id, name: manga.name })
-
-          if (upserted) {
+          if (upserted === UpsertMangaStatus.noUpdate) {
             limit.clearQueue()
             done()
           }
+
+          success.push({ id: manga.id, name: manga.name, status: upserted })
         } catch (error) {
           fail.push({ id: manga.id, name: manga.name, error: `${error}` })
         }
