@@ -7,6 +7,11 @@ on:
         description: "Optional Http Proxy URL (example: https://proxy.com)"
         required: false
         default: ""
+      full_log:
+        description: "Optional enable show full log"
+        required: false
+        type: boolean
+        default: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -76,6 +81,7 @@ jobs:
       - name: Run index.ts
         env:
           HTTP_PROXY: ${{ github.event.inputs.http_proxy }}
+          FULL_LOG: ${{ github.event.inputs.full_log }}
         run: bun index.ts
 
       - name: Commit error.log if failed
