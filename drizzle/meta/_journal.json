@@ -85,6 +85,13 @@
       "when": 1760212077984,
       "tag": "0011_easy_jazinda",
       "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1760324132484,
+      "tag": "0012_deep_captain_cross",
+      "breakpoints": true
     }
   ]
 }

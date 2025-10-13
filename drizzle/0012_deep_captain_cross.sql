@@ -1,0 +1,1 @@
+ALTER TABLE "mangas" DROP CONSTRAINT "mangas_name_unique";

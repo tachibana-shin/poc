@@ -12,7 +12,7 @@ export const mangas = pgTable("mangas", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   raw_id: integer().notNull().unique(),
 
-  name: varchar().notNull().unique(),
+  name: varchar().notNull(),
   cover_url: varchar().notNull(),
   cover_mobile_url: varchar(),
   panorama_url: varchar(),
