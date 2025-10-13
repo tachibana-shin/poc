@@ -1,7 +1,5 @@
 import { writeFile } from "node:fs/promises"
 import pLimit from "p-limit"
-import { decrypt9truyen } from "./actions/decrypt-9truyen"
-import { transferTiktok } from "./actions/transfer-tiktok"
 import { upsertManga } from "./actions/upsert-manga"
 import { getManga, getMangaChapters } from "./apis/cuutruyen/[mangaId]"
 import { getRecently } from "./apis/cuutruyen/recently"

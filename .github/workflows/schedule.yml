@@ -1,0 +1,88 @@
+name: Schelude Build (Bun + Rust + WASM)
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      http_proxy:
+        description: "Optional Http Proxy URL (example: https://proxy.com)"
+        required: false
+        default: ""
+      full_log:
+        description: "Optional enable show full log"
+        required: false
+        type: boolean
+        default: true
+jobs:
+  run:
+    if: ${{ env.ENABLE_SCHEDULE == 'true' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Cargo
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            wasm/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('wasm/Cargo.lock') }}
+
+      - name: Cache wasm/pkg
+        id: cache-wasm
+        uses: actions/cache/restore@v4
+        with:
+          path: wasm/pkg
+          key: ${{ runner.os }}-wasm-${{ hashFiles('wasm/Cargo.toml', 'wasm/Cargo.lock', 'wasm/src/**/*.rs') }}
+
+      - name: Build WASM
+        if: steps.cache-wasm.outputs.cache-hit != 'true'
+        working-directory: wasm
+        run: cargo install wasm-pack && sh build.sh
+
+      - name: Save Cargo
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            wasm/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('wasm/Cargo.lock') }}
+
+      - name: Save wasm/pkg
+        uses: actions/cache/save@v4
+        with:
+          path: wasm/pkg
+          key: ${{ runner.os }}-wasm-${{ hashFiles('wasm/Cargo.toml', 'wasm/Cargo.lock', 'wasm/src/**/*.rs') }}
+
+      - name: Write environment file
+        run: |
+          echo "${{ secrets.ENV_CONTENT }}" > .env
+          echo ".env file created with secret content"
+
+      - name: Write cookie.json safely
+        run: |
+          cat <<'EOF' > cookie.json
+          ${{ secrets.COOKIE }}
+          EOF
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run index.ts
+        env:
+          HTTP_PROXY: ${{ github.event.inputs.http_proxy }}
+          FULL_LOG: ${{ github.event.inputs.full_log }}
+        run: bun schelude.ts
