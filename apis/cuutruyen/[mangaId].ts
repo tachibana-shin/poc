@@ -10,7 +10,9 @@ export async function getManga(mangaId: string): Promise<Manga> {
 
     return data as Manga
   } else {
-    throw new Error(`Failed to fetch manga info: ${await res.text()} ${mangaId}`)
+    throw new Error(
+      `Failed to fetch manga info: ${await res.text()} ${mangaId}`
+    )
   }
 }
 

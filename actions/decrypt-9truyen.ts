@@ -48,14 +48,14 @@ async function decodeAndBuildImage(
   return output
 }
 
-export async function decrypt9truyen(
-  url: string,
-  drmData: string
-) {
+export async function decrypt9truyen(url: string, drmData: string) {
   const res = await fetch(url)
   const contentType = res.headers.get("content-type")
   if (!res.ok) throw new Error(await res.text())
   const buffer = await res.arrayBuffer()
 
-  return { buffer: await decodeAndBuildImage(new Uint8Array(buffer), drmData), contentType }
+  return {
+    buffer: await decodeAndBuildImage(new Uint8Array(buffer), drmData),
+    contentType
+  }
 }

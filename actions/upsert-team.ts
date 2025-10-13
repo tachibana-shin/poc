@@ -21,8 +21,9 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
     return lastUpdate.id
 
   if (team.avatar_url)
-    team.avatar_url = await retryAsync(() =>
-      transferTiktok(team.avatar_url!, cookie), { maxTry: 10 }
+    team.avatar_url = await retryAsync(
+      () => transferTiktok(team.avatar_url!, cookie),
+      { maxTry: 10 }
     ).then(res => res.data.image_info.web_uri_v2)
 
   const value: typeof teams.$inferInsert = {
@@ -39,14 +40,14 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
     created_at: new Date(team.created_at),
     updated_at: new Date(team.updated_at)
   }
-    ;[lastUpdate] = await db
-      .insert(teams)
-      .values(value)
-      .onConflictDoUpdate({
-        target: [teams.slug],
-        set: value
-      })
-      .returning({ id: teams.id, updated_at: teams.updated_at })
+  ;[lastUpdate] = await db
+    .insert(teams)
+    .values(value)
+    .onConflictDoUpdate({
+      target: [teams.slug],
+      set: value
+    })
+    .returning({ id: teams.id, updated_at: teams.updated_at })
 
   assert(lastUpdate, "Team ID is null")
 
