@@ -1,13 +1,13 @@
 import pLimit from "p-limit"
 import { transferTiktok } from "./actions/transfer-tiktok"
-import { upsertManga } from "./actions/upsert-manga"
+import { upsertManga, UpsertMangaStatus } from "./actions/upsert-manga"
 import { getManga, getMangaChapters } from "./apis/cuutruyen/[mangaId]"
 import { getRecently } from "./apis/cuutruyen/recently"
 import cookie from "./cookie.json" with { type: "json" }
 import { retryAsync } from "ts-retry"
 import { sendToTelegram } from "./utils/send-to-telegram"
 
-const success: { id: number; name: string }[] = []
+const success: { id: number; name: string; status: UpsertMangaStatus }[] = []
 const fail: { id: number; name: string; error: string }[] = []
 let lastPage = 1
 
@@ -32,48 +32,55 @@ ${JSON.stringify(tiktokTest.error, null, 2)}
 async function done() {
   const okCount = success.length
   const failCount = fail.length
+  const limitPreview = 10
 
   // 送信するテキストを整形
   const summary = [
-    `📦 *Build Completed*`,
-    `Page: ${lastPage}`,
+    `📦 *Crawl Completed*`,
+    `To page: ${lastPage}`,
     `✅ Success: ${okCount}`,
+    `⌛ Enqueued: ${success.filter(x => x.status === UpsertMangaStatus.inEnqueued).length}`,
     `❌ Failed: ${failCount}`,
+    "",
     ""
   ]
 
+  function makeSuccess(item: (typeof success)[number]) {
+    return `• *#${item.id}*${item.status === UpsertMangaStatus.inEnqueued ? " - [⌛]" : ""} \`${item.name}\``
+  }
+  function makeError(item: (typeof fail)[number]) {
+    return `• *#${item.id}* - \`${item.name}\`:\n\`${item.error}\`\n\n`
+  }
+
   if (okCount) {
     summary.push(`✅ *Success List:*`)
-    summary.push(...success.slice(0, 10).map(x => `• #${x.id} - \`${x.name}\``))
-    if (okCount > 10) summary.push(`...and ${okCount - 10} more`)
+    summary.push(...success.slice(0, limitPreview).map(makeSuccess))
+    if (okCount > limitPreview)
+      summary.push(`...and ${okCount - limitPreview} more`)
     summary.push("")
   }
 
   if (failCount) {
     summary.push(`❌ *Fail List:*`)
-    summary.push(
-      ...fail
-        .slice(0, 10)
-        .map(x => `• #${x.id} - \`${x.name}\`: \`${x.error}\``)
-    )
-    if (failCount > 10) summary.push(`...and ${failCount - 10} more`)
+    summary.push(...fail.slice(0, limitPreview).map(makeError))
+    if (failCount > limitPreview)
+      summary.push(`...and ${failCount - limitPreview} more`)
   }
   const fullLog = [
     "# 📦 Build Log\n",
     `**Page:** ${lastPage}`,
     `**Success:** ${okCount}`,
+    `**Enqueued:** ${success.filter(x => x.status === UpsertMangaStatus.inEnqueued).length}`,
     `**Failed:** ${failCount}`,
     "\n## ✅ Success List",
-    success.map(x => `- ${x.name} (#${x.id})`).join("\n") || "_none_",
+    success.map(makeSuccess).join("\n") || "_none_",
     "\n## ❌ Fail List",
-    fail.map(x => `- ${x.name}: ${x.error}`).join("\n") || "_none_"
+    fail.map(makeError).join("\n") || "_none_"
   ].join("\n")
 
   await sendToTelegram(summary.join("\n"), new File([fullLog], "build-log.md"))
 
   console.log("✅ Sent result to Telegram")
-  process.exit(0)
-
   process.exit(0)
 }
 
@@ -101,12 +108,12 @@ for (let i = 1; ; i++) {
             cookie
           )
 
-          success.push({ id: manga.id, name: manga.name })
-
-          if (upserted) {
+          if (upserted === UpsertMangaStatus.noUpdate) {
             limit.clearQueue()
             done()
           }
+
+          success.push({ id: manga.id, name: manga.name, status: upserted })
         } catch (error) {
           fail.push({ id: manga.id, name: manga.name, error: `${error}` })
         }

@@ -25,8 +25,12 @@ if (Number.isNaN(pageStart)) throw new Error("page_ok.log format invalid")
 for (let i = pageStart + 1; ; i++) {
   const limit = pLimit(10)
 
-  const mangas = await getRecently(i)
-  if (mangas.data.length < 1) break
+  const mangas = await getRecently(i).catch(error =>
+    error.message?.includes("Lỗi không xác định đã xảy ra")
+      ? null
+      : Promise.reject(error)
+  )
+  if (mangas === null || mangas.data.length < 1) break
   console.groupCollapsed(`Page ${i}`)
   await Promise.all(
     mangas.data.map(manga =>
@@ -68,6 +72,8 @@ for (let i = pageStart + 1; ; i++) {
   await writeFile("page_ok.log", `#${i}\n`, {
     flag: "a"
   })
+
+  if (mangas._metadata.current_page >= mangas._metadata.total_pages) break
 }
 // await upsertManga(
 //   await getManga("3758"),

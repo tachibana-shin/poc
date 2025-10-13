@@ -24,20 +24,22 @@ export async function sendToTelegram(text: string, file?: File) {
     })
     if (!res.ok) console.error("Telegram send failed:", await res.text())
 
+    const { message_id } = (await res.json() as any).result
+
     if (file) {
       const form = new FormData()
       form.append("chat_id", TELEGRAM_CHAT_ID!)
       form.append("caption", "📜 Build log (full)")
-      form.append("document", file)
+      form.append("document", new Blob([file]), file.name)
+      form.append("reply_to_message_id", `${message_id}`)
 
       await fetch(
         `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument`,
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
           body: form
         }
-      )
+      ).then(res => res.json())
     }
   } catch (e) {
     console.error("Telegram error:", e)
