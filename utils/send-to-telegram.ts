@@ -14,7 +14,7 @@ export async function sendToTelegram(text: string, file?: File, { notify }: { no
     chat_id: TELEGRAM_CHAT_ID,
     text,
     parse_mode: "Markdown",
-    disable_notification: notify
+    disable_notification: !notify
   }
 
   try {
