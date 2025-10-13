@@ -14,9 +14,14 @@ on:
         required: false
         type: boolean
         default: true
+
+concurrency:
+  group: build-shared
+  cancel-in-progress: false
+
 jobs:
   run:
-    if: ${{ env.ENABLE_SCHEDULE == 'true' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ vars.ENABLE_SCHEDULE == 'true' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
 
     steps:
