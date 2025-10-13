@@ -7,7 +7,10 @@ import { db } from "../db"
 import { teams } from "../db/schema"
 import { type Cookie, transferTiktok } from "./transfer-tiktok"
 
+const teamsStore = new Map<number, number>()
 export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
+  if (teamsStore.has(team.id)) return teamsStore.get(team.id)!
+
   let [lastUpdate] = await db
     .select({ id: teams.id, updated_at: teams.updated_at })
     .from(teams)
@@ -50,6 +53,7 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
     .returning({ id: teams.id, updated_at: teams.updated_at })
 
   assert(lastUpdate, "Team ID is null")
+  teamsStore.set(team.id, lastUpdate.id)
 
   return lastUpdate.id
 }

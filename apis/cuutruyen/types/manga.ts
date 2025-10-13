@@ -13,8 +13,8 @@ export interface Manga {
   newest_chapter_id: number
   newest_chapter_created_at: string // ISO timestamp
   author: MangaAuthor
-  description: string
-  full_description: string // HTML string
+  description?: string
+  full_description?: string // HTML string
   official_url: string
   is_region_limited: boolean
   is_ads: boolean

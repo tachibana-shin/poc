@@ -34,9 +34,21 @@ export async function upsertManga(
     // Run all transferTiktok in parallel
     const [cover, coverMobile, pano, panoMobile, teamId] = await Promise.all([
       retryAsync(() => transferTiktok(manga.cover_url, cookie), { maxTry: 10 }),
-      manga.cover_mobile_url ? retryAsync(() => transferTiktok(manga.cover_mobile_url!, cookie), { maxTry: 10 }) : null,
-      manga.panorama_url ? retryAsync(() => transferTiktok(manga.panorama_url!, cookie), { maxTry: 10 }) : null,
-      manga.panorama_mobile_url ? retryAsync(() => transferTiktok(manga.panorama_mobile_url!, cookie), { maxTry: 10 }) : null,
+      manga.cover_mobile_url
+        ? retryAsync(() => transferTiktok(manga.cover_mobile_url!, cookie), {
+            maxTry: 10
+          })
+        : null,
+      manga.panorama_url
+        ? retryAsync(() => transferTiktok(manga.panorama_url!, cookie), {
+            maxTry: 10
+          })
+        : null,
+      manga.panorama_mobile_url
+        ? retryAsync(() => transferTiktok(manga.panorama_mobile_url!, cookie), {
+            maxTry: 10
+          })
+        : null,
       upsertTeam(manga.team, cookie)
     ] as const)
 
@@ -55,8 +67,8 @@ export async function upsertManga(
       panorama_mobile_url: manga.panorama_mobile_url,
       panorama_dominant_color: manga.panorama_dominant_color,
       panorama_dominant_color_2: manga.panorama_dominant_color_2,
-      description: manga.description,
-      full_description: manga.full_description,
+      description: manga.description ?? "",
+      full_description: manga.full_description ?? "",
       official_url: manga.official_url,
       is_region_limited: manga.is_region_limited,
       is_ads: manga.is_ads,
@@ -68,10 +80,10 @@ export async function upsertManga(
       updated_at: new Date(new Date(manga.updated_at).getTime() - 1_0000)
     }
 
-      ;[lastUpdate] = await db
-        .insert(mangas)
-        .values(value)
-        .returning({ id: mangas.id, updated_at: mangas.updated_at })
+    ;[lastUpdate] = await db
+      .insert(mangas)
+      .values(value)
+      .returning({ id: mangas.id, updated_at: mangas.updated_at })
   } else {
     await db
       .update(mangas)
@@ -94,8 +106,10 @@ export async function upsertManga(
   // next update tags
   //
   assert(lastUpdate, "Manga is undefined")
-  const tagsIdDb = await Promise.all(
-    manga.tags.map(async tag => await upsertTag(tag))
+  const tagsIdDb = Array.from(
+    new Set(
+      await Promise.all(manga.tags.map(async tag => await upsertTag(tag)))
+    )
   )
 
   if (tagsIdDb.length > 0)
@@ -109,12 +123,16 @@ export async function upsertManga(
       )
       .onConflictDoNothing()
 
-  const authorsIdDb = await Promise.all(
-    manga.author.name
-      .split(",")
-      .map(item => item.trim())
-      .filter(Boolean)
-      .map(async author => await upsertAuthor({ name: author }))
+  const authorsIdDb = Array.from(
+    new Set(
+      await Promise.all(
+        manga.author.name
+          .split(",")
+          .map(item => item.trim())
+          .filter(Boolean)
+          .map(async author => await upsertAuthor({ name: author }))
+      )
+    )
   )
 
   if (authorsIdDb.length > 0)
@@ -135,7 +153,9 @@ export async function upsertManga(
       limit(async () =>
         upsertChapter(
           lastUpdate.id,
-          await retryAsync(() => getMangaChapter(`${chapter.id}`), { maxTry: 10 }),
+          await retryAsync(() => getMangaChapter(`${chapter.id}`), {
+            maxTry: 10
+          }),
           cookie
         )
       )
