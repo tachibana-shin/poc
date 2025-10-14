@@ -1,0 +1,1 @@
+ALTER TABLE "mangas" ALTER COLUMN "panorama_url" SET NOT NULL;
