@@ -141,6 +141,20 @@
       "when": 1760522146678,
       "tag": "0019_bright_epoch",
       "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1760523189527,
+      "tag": "0020_thick_komodo",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1760523800925,
+      "tag": "0021_smart_living_lightning",
+      "breakpoints": true
     }
   ]
 }
