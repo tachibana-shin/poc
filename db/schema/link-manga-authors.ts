@@ -1,4 +1,4 @@
-import { integer, pgTable, unique } from "drizzle-orm/pg-core"
+import { index, integer, pgTable, unique } from "drizzle-orm/pg-core"
 import { authors } from "./authors"
 import { mangas } from "./mangas"
 
@@ -13,5 +13,8 @@ export const linkMangaAuthors = pgTable(
       .notNull()
       .references(() => authors.id)
   },
-  table => [unique().on(table.mangaId, table.authorId)]
+  table => [
+    unique().on(table.mangaId, table.authorId),
+    index().on(table.authorId)
+  ]
 )

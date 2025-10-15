@@ -155,6 +155,20 @@
       "when": 1760523800925,
       "tag": "0021_smart_living_lightning",
       "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1760523800927,
+      "tag": "0022_military_norrin_radd",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1760532442080,
+      "tag": "0022_sad_maverick",
+      "breakpoints": true
     }
   ]
 }

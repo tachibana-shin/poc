@@ -1,4 +1,4 @@
-import { integer, pgTable, timestamp, unique } from "drizzle-orm/pg-core"
+import { index, integer, pgTable, timestamp, unique } from "drizzle-orm/pg-core"
 import { mangas } from "./mangas"
 import { tags } from "./tags"
 
@@ -15,5 +15,5 @@ export const linkMangaTags = pgTable(
 
     created_at: timestamp().notNull().defaultNow()
   },
-  table => [unique().on(table.mangaId, table.tagId)]
+  table => [unique().on(table.mangaId, table.tagId), index().on(table.tagId)]
 )

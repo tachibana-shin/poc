@@ -1,5 +1,5 @@
 {
-  "id": "1cbeed06-d6f3-42b0-956c-df363faebbef",
+  "id": "0886ee4d-b8d3-4663-865e-b0fec02abaab",
   "prevId": "6ef25acd-6eab-4ba2-811c-21e7a0292078",
   "version": "7",
   "dialect": "postgresql",
@@ -242,7 +242,23 @@
           "notNull": true
         }
       },
-      "indexes": {},
+      "indexes": {
+        "link_manga_authors_authorId_index": {
+          "name": "link_manga_authors_authorId_index",
+          "columns": [
+            {
+              "expression": "authorId",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
       "foreignKeys": {
         "link_manga_authors_mangaId_mangas_id_fk": {
           "name": "link_manga_authors_mangaId_mangas_id_fk",
@@ -327,7 +343,23 @@
           "default": "now()"
         }
       },
-      "indexes": {},
+      "indexes": {
+        "link_manga_tags_tagId_index": {
+          "name": "link_manga_tags_tagId_index",
+          "columns": [
+            {
+              "expression": "tagId",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
       "foreignKeys": {
         "link_manga_tags_mangaId_mangas_id_fk": {
           "name": "link_manga_tags_mangaId_mangas_id_fk",

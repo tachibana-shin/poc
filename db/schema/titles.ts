@@ -30,7 +30,7 @@ export const titles = pgTable(
     index().on(table.manga_id, table.primary),
     index("title_search_index").using(
       "gin",
-      sql`${table.name}, gin_trgm_ops`
+      sql`${table.name} gin_trgm_ops`
     )
   ]
 )
