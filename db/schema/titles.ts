@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm"
 import {
   boolean,
   index,
@@ -27,5 +28,9 @@ export const titles = pgTable(
   table => [
     unique().on(table.manga_id, table.name),
     index().on(table.manga_id, table.primary),
+    index("title_search_index").using(
+      "gin",
+      sql`to_tsvector('english', ${table.name})`
+    )
   ]
 )
