@@ -5,7 +5,7 @@ export interface Manga {
   name: string
   cover_url: string
   cover_mobile_url?: string
-  panorama_url?: string
+  panorama_url: string
   panorama_mobile_url?: string
   panorama_dominant_color?: string
   panorama_dominant_color_2?: string

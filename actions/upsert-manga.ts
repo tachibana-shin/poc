@@ -1,5 +1,5 @@
 import assert from "node:assert"
-import { eq } from "drizzle-orm"
+import { and, eq, inArray, not } from "drizzle-orm"
 import pLimit from "p-limit"
 import { retryAsync } from "ts-retry"
 import { getMangaChapter } from "../apis/cuutruyen/[chapterId]"
@@ -11,6 +11,7 @@ import { upsertAuthor } from "./upsert-author"
 import { upsertChapter } from "./upsert-chapter"
 import { upsertTag } from "./upsert-tag"
 import { upsertTeam } from "./upsert-team"
+import { upsertTitles } from "./upsert-titles"
 
 export enum UpsertMangaStatus {
   noUpdate,
@@ -41,19 +42,19 @@ export async function upsertManga(
     const [cover, coverMobile, pano, panoMobile, teamId] = await Promise.all([
       retryAsync(() => transferTiktok(manga.cover_url, cookie), { maxTry: 10 }),
       manga.cover_mobile_url
-        ? retryAsync(() => transferTiktok(manga.cover_mobile_url!, cookie), {
-          maxTry: 10
-        })
+        ? // biome-ignore lint/style/noNonNullAssertion: <false>
+          retryAsync(() => transferTiktok(manga.cover_mobile_url!, cookie), {
+            maxTry: 10
+          })
         : null,
-      manga.panorama_url
-        ? retryAsync(() => transferTiktok(manga.panorama_url!, cookie), {
-          maxTry: 10
-        })
-        : null,
+      retryAsync(() => transferTiktok(manga.panorama_url, cookie), {
+        maxTry: 10
+      }),
       manga.panorama_mobile_url
-        ? retryAsync(() => transferTiktok(manga.panorama_mobile_url!, cookie), {
-          maxTry: 10
-        })
+        ? // biome-ignore lint/style/noNonNullAssertion: <false>
+          retryAsync(() => transferTiktok(manga.panorama_mobile_url!, cookie), {
+            maxTry: 10
+          })
         : null,
       upsertTeam(manga.team, cookie)
     ] as const)
@@ -66,7 +67,7 @@ export async function upsertManga(
 
     const value: typeof mangas.$inferInsert = {
       raw_id: manga.id,
-      name: manga.name,
+      // name: manga.name,
       cover_url: manga.cover_url,
       cover_mobile_url: manga.cover_mobile_url,
       panorama_url: manga.panorama_url,
@@ -81,20 +82,19 @@ export async function upsertManga(
       views_count: manga.views_count,
       is_nsfw: manga.is_nsfw,
       team: teamId,
-      titles: manga.titles,
       created_at: new Date(manga.created_at),
       updated_at: new Date(new Date(manga.updated_at).getTime() - 1_0000)
     }
 
-      ;[lastUpdate] = await db
-        .insert(mangas)
-        .values(value)
-        .returning({ id: mangas.id, updated_at: mangas.updated_at })
+    ;[lastUpdate] = await db
+      .insert(mangas)
+      .values(value)
+      .returning({ id: mangas.id, updated_at: mangas.updated_at })
   } else {
     await db
       .update(mangas)
       .set({
-        name: manga.name,
+        // name: manga.name,
         description: manga.description,
         full_description: manga.full_description,
         official_url: manga.official_url,
@@ -102,8 +102,7 @@ export async function upsertManga(
         is_ads: manga.is_ads,
         views_count: manga.views_count,
         is_nsfw: manga.is_nsfw,
-        team: await upsertTeam(manga.team, cookie),
-        titles: manga.titles
+        team: await upsertTeam(manga.team, cookie)
       })
       .where(eq(mangas.id, lastUpdate.id))
   }
@@ -112,6 +111,8 @@ export async function upsertManga(
   // next update tags
   //
   assert(lastUpdate, "Manga is undefined")
+  await upsertTitles(lastUpdate.id, manga.titles)
+
   const tagsIdDb = Array.from(
     new Set(
       await Promise.all(manga.tags.map(async tag => await upsertTag(tag)))
@@ -128,6 +129,15 @@ export async function upsertManga(
         })) satisfies Array<typeof linkMangaTags.$inferInsert>
       )
       .onConflictDoNothing()
+  // delete tags removed
+  await db
+    .delete(linkMangaTags)
+    .where(
+      and(
+        eq(linkMangaTags.mangaId, lastUpdate.id),
+        not(inArray(linkMangaTags.tagId, tagsIdDb))
+      )
+    )
 
   const authorsIdDb = Array.from(
     new Set(
@@ -151,6 +161,15 @@ export async function upsertManga(
         })) satisfies Array<typeof linkMangaAuthors.$inferInsert>
       )
       .onConflictDoNothing()
+  // delete authors removed
+  await db
+    .delete(linkMangaAuthors)
+    .where(
+      and(
+        eq(linkMangaAuthors.mangaId, lastUpdate.id),
+        not(inArray(linkMangaAuthors.authorId, authorsIdDb))
+      )
+    )
 
   // update chapters
   const limit = pLimit(5)

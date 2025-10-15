@@ -3,7 +3,6 @@ import {
   boolean,
   index,
   integer,
-  json,
   pgTable,
   timestamp,
   varchar
@@ -16,7 +15,7 @@ export const mangas = pgTable(
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     raw_id: integer().notNull().unique(),
 
-    name: varchar().notNull(),
+    // name: varchar().notNull(),
     cover_url: varchar().notNull(),
     cover_mobile_url: varchar(),
     panorama_url: varchar().notNull(),
@@ -34,7 +33,7 @@ export const mangas = pgTable(
     team: integer()
       .notNull()
       .references(() => teams.id),
-    titles: json().array().notNull(),
+    // titles: json().array().notNull(),
 
     created_at: timestamp().notNull().defaultNow(),
     updated_at: timestamp().notNull().defaultNow()

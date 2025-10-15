@@ -8,7 +8,8 @@ import {
   mangas,
   pages,
   tags,
-  teams
+  teams,
+  titles
 } from "./schema"
 
 const connectionString = process.env.DATABASE_URL
@@ -16,5 +17,14 @@ assert(connectionString, "DATABASE_URL environment variable is not set")
 
 export const client = postgres(connectionString, { prepare: false })
 export const db = drizzle(client, {
-  schema: { authors, chapters, linkMangaTags, mangas, pages, tags, teams }
+  schema: {
+    authors,
+    chapters,
+    linkMangaTags,
+    mangas,
+    pages,
+    tags,
+    teams,
+    titles
+  }
 })
