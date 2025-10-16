@@ -12,6 +12,22 @@ export async function upsertTitles(mangaId: number, data: MangaTitle[]) {
     .from(titles)
     .where(eq(titles.manga_id, mangaId))
 
+  const storeName = new Set<string>()
+  for (let index = 0; index < data.length; index++) {
+    // biome-ignore lint/style/noNonNullAssertion: <true>
+    const title = data[index]!
+    if (storeName.has(title.name)) {
+      const i = Number.parseInt(title.name.match(/(\d+)$/)?.[1] ?? "1", 10)
+
+      title.name = `${title.name.replace(/\w+\d+$/, "")} (${i + 1})`
+      index--
+      console.log(`Duplicate title found: ${title.name}`)
+      continue
+    }
+
+    storeName.add(title.name)
+  }
+
   const validate = new Set(
     await Promise.all(data.map(title => upsertTitle(mangaId, title)))
   )
