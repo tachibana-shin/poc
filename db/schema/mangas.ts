@@ -39,6 +39,7 @@ export const mangas = pgTable(
     updated_at: timestamp().notNull().defaultNow()
   },
   table => [
-    index("mangas_views_count_order_desc_idx").on(desc(table.views_count))
+    index("mangas_views_count_order_desc_idx").on(desc(table.views_count)),
+    index().on(table.team)
   ]
 )

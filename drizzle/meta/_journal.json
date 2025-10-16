@@ -176,6 +176,13 @@
       "when": 1760618858988,
       "tag": "0023_messy_mimic",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1760620928364,
+      "tag": "0024_tough_black_queen",
+      "breakpoints": true
     }
   ]
 }

@@ -1,0 +1,1 @@
+CREATE INDEX "mangas_team_index" ON "mangas" USING btree ("team");
