@@ -14,8 +14,6 @@ export const teams = pgTable("teams", {
   description: varchar().notNull(),
   is_ads: boolean().notNull(),
   facebook_address: varchar(),
-  views_count: integer().notNull(),
-  translations_count: integer().notNull(),
 
   main_page_blocks: varchar(),
   avatar_url: varchar(),

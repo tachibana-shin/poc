@@ -36,8 +36,6 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
     description: team.description,
     is_ads: team.is_ads,
     facebook_address: team.facebook_address,
-    views_count: team.views_count,
-    translations_count: team.translations_count,
     main_page_blocks: team.main_page_blocks,
     avatar_url: team.avatar_url,
     created_at: new Date(team.created_at),
