@@ -96,7 +96,7 @@ export async function upsertManga(
       .set({
         // name: manga.name,
         description: manga.description,
-        full_description: manga.full_description,
+        full_description: manga.full_description ?? "",
         official_url: manga.official_url,
         is_region_limited: manga.is_region_limited,
         is_ads: manga.is_ads,
