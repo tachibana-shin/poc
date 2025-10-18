@@ -45,7 +45,7 @@ export async function upsertTeam(team: MangaTeam, cookie: Cookie) {
     .insert(teams)
     .values(value)
     .onConflictDoUpdate({
-      target: [teams.slug],
+      target: [teams.raw_id],
       set: value
     })
     .returning({ id: teams.id, updated_at: teams.updated_at })
