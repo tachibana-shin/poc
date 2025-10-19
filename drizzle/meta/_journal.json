@@ -183,6 +183,13 @@
       "when": 1760620928364,
       "tag": "0024_tough_black_queen",
       "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1760859045537,
+      "tag": "0025_chunky_blockbuster",
+      "breakpoints": true
     }
   ]
 }
