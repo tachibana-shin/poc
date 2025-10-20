@@ -1,10 +1,11 @@
 import assert from "node:assert"
-import { and, eq, inArray, not } from "drizzle-orm"
+import { and, count, eq, inArray, not } from "drizzle-orm"
 import pLimit from "p-limit"
 import { retryAsync } from "ts-retry"
 import { getMangaChapter } from "../apis/cuutruyen/[chapterId]"
 import type { Manga, MangaChapter } from "../apis/cuutruyen/types/manga"
 import { db } from "../db"
+import { chapters as chaptersDB } from "../db/schema"
 import { linkMangaAuthors, linkMangaTags, mangas } from "../db/schema"
 import { type Cookie, transferTiktok } from "./transfer-tiktok"
 import { upsertAuthor } from "./upsert-author"
@@ -29,10 +30,19 @@ export async function upsertManga(
     .from(mangas)
     .where(eq(mangas.raw_id, manga.id))
     .limit(1)
+  const [countChapters] = lastUpdate
+    ? await db
+        .select({
+          count: count(chaptersDB.id)
+        })
+        .from(chaptersDB)
+        .where(eq(chaptersDB.manga_id, lastUpdate.id))
+    : [{ count: 0 }]
 
   if (
     lastUpdate &&
-    lastUpdate.updated_at.getTime() >= new Date(manga.updated_at).getTime()
+    lastUpdate.updated_at.getTime() >= new Date(manga.updated_at).getTime() &&
+    countChapters?.count === chapters.length
   )
     return UpsertMangaStatus.noUpdate
 
