@@ -7,6 +7,10 @@ on:
         description: "Optional Http Proxy URL (example: https://proxy.com)"
         required: false
         default: ""
+      target_url:
+        description: "Optional Target URL"
+        required: false
+        default: ""
       full_log:
         description: "Optional enable show full log"
         required: false
@@ -86,6 +90,7 @@ jobs:
       - name: Run index.ts
         env:
           HTTP_PROXY: ${{ github.event.inputs.http_proxy }}
+          TARGET_URL: ${{ github.event.inputs.target_url }}
           FULL_LOG: ${{ github.event.inputs.full_log }}
         run: bun index.ts
 
