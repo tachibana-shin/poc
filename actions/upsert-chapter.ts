@@ -70,7 +70,11 @@ export async function upsertChapter(
               return false
             }
 
-            if (process.env.FULL_LOG ?? true)
+            if (
+              typeof process.env.FULL_LOG === "boolean"
+                ? process.env.FULL_LOG
+                : process.env.FULL_LOG !== "false"
+            )
               console.log("Upserting page ", page.id)
 
             const { buffer, contentType } = await decrypt9truyen(
