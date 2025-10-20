@@ -1,5 +1,5 @@
 import assert from "node:assert"
-import { eq } from "drizzle-orm"
+import { and, eq } from "drizzle-orm"
 import pLimit from "p-limit"
 import sha256 from "sha256"
 import { retryAsync } from "ts-retry"
@@ -18,7 +18,9 @@ export async function upsertChapter(
   const [lastUpdate] = await db
     .select({ updated_at: chapters.updated_at })
     .from(chapters)
-    .where(eq(chapters.manga_id, manga_id_db))
+    .where(
+      and(eq(chapters.manga_id, manga_id_db), eq(chapters.raw_id, chapter.id))
+    )
     .limit(1)
 
   if (
