@@ -15,6 +15,10 @@ on:
         description: "Optional Target URL"
         required: false
         default: ""
+      delay_fetch:
+        description: "Optional delay fetch"
+        required: false
+        default: true
       full_log:
         description: "Optional enable show full log"
         required: false
@@ -96,6 +100,7 @@ jobs:
           HTTP_PROXY: ${{ github.event.inputs.http_proxy }}
           HTTP_PROXY_CURL: ${{ github.event.inputs.http_proxy_curl }}
           TARGET_URL: ${{ github.event.inputs.target_url }}
+          DELAY_FETCH: ${{ github.event.inputs.delay_fetch }}
           FULL_LOG: ${{ github.event.inputs.full_log }}
         run: |
           if [ -n "${HTTP_PROXY}" ]; then

@@ -9,6 +9,14 @@ on:
         description: "Optional Http Proxy URL (example: https://proxy.com)"
         required: false
         default: ""
+      http_proxy_curl:
+        description: "Optional Raw Http Proxy URL (example: http://proxy.com)"
+        required: false
+        default: ""
+      delay_fetch:
+        description: "Optional delay fetch"
+        required: false
+        default: true
       target_url:
         description: "Optional Target URL"
         required: false
@@ -92,7 +100,9 @@ jobs:
 
       - name: Run index.ts
         env:
-          HTTP_PROXY: ${{ github.event.inputs.http_proxy }}
+          HTTP_PROXY: ${{ github.event_name == 'schedule' && secrets.HTTP_PROXY || github.event.inputs.http_proxy }}
+          HTTP_PROXY_CURL: ${{ github.event_name == 'schedule' && secrets.HTTP_PROXY_CURL || github.event.inputs.http_proxy_curl }}
           TARGET_URL: ${{ github.event.inputs.target_url }}
+          DELAY_FETCH: ${{ github.event_name == 'schedule' && vars.DELAY_FETCH || github.event.inputs.delay_fetch }}
           FULL_LOG: ${{ github.event.inputs.full_log }}
         run: bun schelude.ts
