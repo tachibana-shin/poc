@@ -43,7 +43,7 @@ for (let i = pageStart + 1; ; i++) {
               maxTry: 10,
               delay: 10_000
             }),
-            await retryAsync(() => getMangaChapters(`${manga.id}`), {
+            () => retryAsync(() => getMangaChapters(`${manga.id}`), {
               maxTry: 10,
               delay: 10_000
             }),

@@ -22,7 +22,7 @@ export enum UpsertMangaStatus {
 
 export async function upsertManga(
   manga: Manga,
-  { data: chapters, done: chaptersOk }: { data: MangaChapter[]; done: boolean },
+  getChapters: () => Promise<{ data: MangaChapter[]; done: boolean }>,
   cookie: Cookie
 ): Promise<UpsertMangaStatus> {
   let [lastUpdate] = await db
@@ -42,9 +42,11 @@ export async function upsertManga(
   if (
     lastUpdate &&
     lastUpdate.updated_at.getTime() >= new Date(manga.updated_at).getTime() &&
-    (countChapters?.count ?? 0) > chapters.length
+    (countChapters?.count ?? 0) > manga.chapters_count
   )
     return UpsertMangaStatus.noUpdate
+
+  const { data: chapters, done: chaptersOk } = await getChapters()
 
   if (!lastUpdate) {
     // not found insert this
