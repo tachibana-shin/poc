@@ -9,7 +9,7 @@ export function patch() {
     async (...args: Parameters<typeof fetch>): Promise<Response> => {
       const now = Date.now()
       const elapsed = now - lastFetchTime
-      const wait = Math.max(0, 1000 - elapsed)
+      const wait = Math.max(0, 300 - elapsed)
 
       if (wait > 0) {
         // 前回から 1 秒経っていなければ待機
