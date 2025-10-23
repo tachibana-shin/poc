@@ -17,6 +17,7 @@ on:
         description: "Optional delay fetch"
         required: false
         default: true
+        type: boolean
       target_url:
         description: "Optional Target URL"
         required: false
