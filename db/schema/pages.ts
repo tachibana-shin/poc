@@ -22,11 +22,10 @@ export const pages = pgTable(
     height: integer(),
     path: varchar().notNull(),
 
-    hash: varchar().notNull(),
     size: integer().notNull(),
 
     created_at: timestamp().notNull().defaultNow(),
     updated_at: timestamp().notNull().defaultNow()
   },
-  table => [index().on(table.chapter_id, table.order), index().on(table.hash)]
+  table => [index().on(table.chapter_id, table.order)]
 )

@@ -1,7 +1,6 @@
 import assert from "node:assert"
 import { and, eq } from "drizzle-orm"
 import pLimit from "p-limit"
-import sha256 from "sha256"
 import { retryAsync } from "ts-retry"
 import type { MangaChapter as BaseMangaChapter } from "../apis/cuutruyen/types/manga"
 import type { MangaChapter } from "../apis/cuutruyen/types/manga-chapter"
@@ -73,8 +72,7 @@ export async function upsertChapter(
           async () => {
             const exists = pagesDb.find(p => p.raw_id === page.id)
 
-            const hash = sha256(page.image_url)
-            if (exists && hash === exists.hash) {
+            if (exists) {
               return false
             }
 
@@ -96,7 +94,7 @@ export async function upsertChapter(
               page.image_url
             )
 
-            return { page, image_info: tik.data.image_info, hash }
+            return { page, image_info: tik.data.image_info }
           },
           {
             maxTry: Number(process.env.MAX_RETRY) || 10
@@ -112,7 +110,7 @@ export async function upsertChapter(
         (typeof uploadResults)[number],
         false
       >[]
-    ).map(async ({ page, image_info, hash }) => {
+    ).map(async ({ page, image_info }) => {
       await db.insert(pages).values({
         raw_id: page.id,
         chapter_id: chapterDb.id,
@@ -122,7 +120,6 @@ export async function upsertChapter(
         height: image_info.height,
         path: image_info.web_uri_v2,
 
-        hash,
         size: image_info.size
       } satisfies typeof pages.$inferInsert)
     })
