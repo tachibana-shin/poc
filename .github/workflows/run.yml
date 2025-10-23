@@ -18,6 +18,7 @@ on:
       delay_fetch:
         description: "Optional delay fetch"
         required: false
+        type: boolean
         default: true
       full_log:
         description: "Optional enable show full log"
