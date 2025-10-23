@@ -3,6 +3,7 @@ import { and, eq } from "drizzle-orm"
 import pLimit from "p-limit"
 import sha256 from "sha256"
 import { retryAsync } from "ts-retry"
+import type { MangaChapter as BaseMangaChapter } from "../apis/cuutruyen/types/manga"
 import type { MangaChapter } from "../apis/cuutruyen/types/manga-chapter"
 import { db } from "../db"
 import { chapters, pages } from "../db/schema"
@@ -11,23 +12,30 @@ import { type Cookie, transferTiktok } from "./transfer-tiktok"
 
 export async function upsertChapter(
   manga_id_db: number,
-  chapter: MangaChapter,
+  metaChapter: BaseMangaChapter,
+  getChapter: () => Promise<MangaChapter>,
   cookie: Cookie
 ): Promise<boolean> {
-  console.log("Upserting chapter ", chapter.id)
+  console.log("Upserting chapter ", metaChapter.id)
   const [lastUpdate] = await db
     .select({ updated_at: chapters.updated_at })
     .from(chapters)
     .where(
-      and(eq(chapters.manga_id, manga_id_db), eq(chapters.raw_id, chapter.id))
+      and(
+        eq(chapters.manga_id, manga_id_db),
+        eq(chapters.raw_id, metaChapter.id)
+      )
     )
     .limit(1)
 
   if (
     lastUpdate &&
-    lastUpdate.updated_at.getTime() >= new Date(chapter.updated_at).getTime()
+    lastUpdate.updated_at.getTime() >=
+      new Date(metaChapter.updated_at).getTime()
   )
     return false
+
+  const chapter = await getChapter()
 
   const value = {
     raw_id: chapter.id,
