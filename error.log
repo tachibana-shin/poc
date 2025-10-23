@@ -4796,3 +4796,5 @@ params: 1634678,3404,0,1024,1456,ad-site-i18n-sg/202510205d0da3fd7d5acc76470281a
 #3513(Thu Oct 23 2025 09:01:55 GMT+0000 (Coordinated Universal Time)): TransferTiktokError: You don't have permission to operate this, contact the account manager.
 #2666(Thu Oct 23 2025 09:01:56 GMT+0000 (Coordinated Universal Time)): TransferTiktokError: You don't have permission to operate this, contact the account manager.
 #2820(Thu Oct 23 2025 09:01:56 GMT+0000 (Coordinated Universal Time)): TransferTiktokError: You don't have permission to operate this, contact the account manager.
+#379(Thu Oct 23 2025 10:59:28 GMT+0000 (Coordinated Universal Time)): Error: Failed query: insert into "pages" ("id", "raw_id", "chapter_id", "order", "width", "height", "path", "hash", "size", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, default, default)
+params: 1042858,46931,9,844,1200,ad-site-i18n-sg/202510235d0db3197d07c7394512acfb,b78f8ede673e013264eff2a272342fb55213890cf4cef27a51af14c4cb55f7ba,163710
