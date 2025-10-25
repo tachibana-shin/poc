@@ -22,7 +22,7 @@ if (!tiktokTest.ok) {
 
 \`\`\`json
 ${JSON.stringify(tiktokTest.error, null, 2)}
-\`\`\`    
+\`\`\`
 
 `)
 
@@ -97,6 +97,8 @@ for (let i = 1; ; i++) {
   const mangas = await getRecently(i)
   if (mangas.data.length < 1) break
   console.groupCollapsed(`Page ${i}`)
+
+  let shouldStop = false
   await Promise.all(
     mangas.data.map(manga =>
       limit(async () => {
@@ -108,19 +110,19 @@ for (let i = 1; ; i++) {
               maxTry: 10,
               delay: 10_000
             }),
-            () => retryAsync(() => getMangaChapters(`${manga.id}`), {
-              maxTry: 10,
-              delay: 10_000
-            }),
+            () =>
+              retryAsync(() => getMangaChapters(`${manga.id}`), {
+                maxTry: 10,
+                delay: 10_000
+              }),
             cookie
           )
 
           if (upserted === UpsertMangaStatus.noUpdate) {
-            limit.clearQueue()
-            done()
+            shouldStop = true
+          } else {
+            success.push({ id: manga.id, name: manga.name, status: upserted })
           }
-
-          success.push({ id: manga.id, name: manga.name, status: upserted })
         } catch (error) {
           fail.push({ id: manga.id, name: manga.name, error: `${error}` })
         }
@@ -129,6 +131,13 @@ for (let i = 1; ; i++) {
       })
     )
   )
+
+  if (shouldStop) {
+    console.log("🚫 Detected noUpdate, stopping gracefully.")
+    await done()
+    break
+  }
+
   console.groupEnd()
   console.log("Done page ", i)
 
