@@ -1,6 +1,6 @@
 import { baseUrl, requestInit } from "./config"
 import type { MangaListResponse } from "./types/recently"
-console.log({baseUrl})
+
 export async function getRecently(page: number): Promise<MangaListResponse> {
   const res = await fetch(
     `${baseUrl}/api/v2/mangas/recently_updated?page=${page}&per_page=50`,
