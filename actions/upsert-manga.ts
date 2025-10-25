@@ -41,8 +41,8 @@ export async function upsertManga(
 
   if (
     lastUpdate &&
-    lastUpdate.updated_at.getTime() >= new Date(manga.updated_at).getTime() &&
-    (countChapters?.count ?? 0) > manga.chapters_count
+    lastUpdate.updated_at.getTime() === new Date(manga.updated_at).getTime() &&
+    (countChapters?.count ?? 0) >= manga.chapters_count
   )
     return UpsertMangaStatus.noUpdate
 

@@ -1,8 +1,8 @@
-import { baseUrl } from "./config"
+import { baseUrl, requestInit } from "./config"
 import type { Manga, MangaChapter } from "./types/manga"
 
 export async function getManga(mangaId: string): Promise<Manga> {
-  const res = await fetch(`${baseUrl}/api/v2/mangas/${mangaId}`)
+  const res = await fetch(`${baseUrl}/api/v2/mangas/${mangaId}`, requestInit)
   if (res.ok) {
     // biome-ignore lint/suspicious/noExplicitAny: <false>
     const { data } = (await res.json()) as { data: Manga }
@@ -19,7 +19,7 @@ export async function getManga(mangaId: string): Promise<Manga> {
 export async function getMangaChapters(
   mangaId: string
 ): Promise<{ data: MangaChapter[]; done: boolean }> {
-  const res = await fetch(`${baseUrl}/api/v2/mangas/${mangaId}/chapters`)
+  const res = await fetch(`${baseUrl}/api/v2/mangas/${mangaId}/chapters`, requestInit)
   if (res.ok) {
     // biome-ignore lint/suspicious/noExplicitAny: <false>
     const { data } = (await res.json()) as { data: MangaChapter[] }
