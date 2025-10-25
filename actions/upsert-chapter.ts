@@ -15,7 +15,6 @@ export async function upsertChapter(
   getChapter: () => Promise<MangaChapter>,
   cookie: Cookie
 ): Promise<boolean> {
-  console.log("Upserting chapter ", metaChapter.id)
   const [lastUpdate] = await db
     .select({ updated_at: chapters.updated_at })
     .from(chapters)
@@ -34,6 +33,7 @@ export async function upsertChapter(
   )
     return false
 
+  console.log("Upserting chapter ", metaChapter.id)
   const chapter = await getChapter()
 
   const value = {
